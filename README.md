@@ -1,29 +1,22 @@
-# U-Subscriptions — Página Principal (Solo HTML)
+# U-Subscriptions
 
-Este repositorio contiene la maquetación en **HTML puro** (sin estilos CSS ni JavaScript) para la interfaz principal del proyecto **U-Subscriptions**.
+## Descripción
+Maquetación web de la interfaz principal (*Landing Page*) para la plataforma **U-Subscriptions**. El proyecto está enfocado en la estructuración semántica del contenido, sirviendo como la base estructurada para la visualización de promociones, marcas asociadas y convenios disponibles.
 
----
+## Prototipo
+[Ver prototipo en Figma](https://www.figma.com/design/Tx59J0nJ55ZTCTpQtxekFn/El-equipo-de-ahuribe-team-library?node-id=3413-448&t=sIxbWpnUanCxYojt-1)
 
-##  Descripción
+## Pantalla implementada
+**Página Principal (Home / Landing Page)**  
+Su propósito es servir como el punto de entrada principal para los usuarios, mostrando el menú de navegación, un banner con marcas destacadas y promociones, las tarjetas de convenios activos (como Spotify), el formulario rápido de registro y el pie de página con accesos a redes sociales.
 
-El objetivo de esta entrega es definir la **estructura semántica y el contenido base** de la página web mediante etiquetas de HTML5, sirviendo como el esqueleto sobre el cual se aplicarán los diseños de UI/UX visualizados en el prototipo.
+## Integrantes
+- Ashley Lozano
+- Sebastian Collaguazo
+- Anthony Uribe
 
----
-
-##  Estructura del Contenido en HTML
-
-El archivo `index.html` está organizado en las siguientes secciones principales:
-
-* **Menú de Navegación:** Lista de enlaces a las secciones principales (*Convenios, Notificaciones, Ahorros, Pagos, Perfil*).
-* **Banner de Promociones:** Encabezado con el mensaje principal y marcas asociadas (*Flixbus, Booking.com, Adidas, Emirates, McDonald's, Samsung*) junto al enlace *"Saber más"*.
-* **Sección Convenios (Destacados):** Muestra las primeras tarjetas de suscripciones (como Spotify Activo / Venta pausada) con detalles de compañía, cuenta, botón de favoritos y enlaces a *"Ver más"*.
-* **Sección Todos los Convenios:** 
-  * Bloque de registro rápido con mensaje descriptivo y botón *"Registrarse"*.
-  * Catálogo general de convenios con opciones para marcar como *"Favorito"*, ver detalles e imagen del servicio.
-* **Footer (Pie de página):** Iconos con enlaces a redes sociales (*Instagram, Facebook, WhatsApp*) y el mensaje promocional *"Síguenos para nuevas promociones"*.
-
----
-
-##  Tecnologías
-
-* **HTML5:** Marcado de texto, listas, enlaces, imágenes y botones sin hoja de estilos externa.
+## Tecnologías
+- HTML5
+- CSS3
+- Git
+- GitHub
