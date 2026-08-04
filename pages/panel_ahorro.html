@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de ahorro de U-Subscriptions: consulta tus suscripciones activas y visualiza cuánto has ahorrado.">
+  <title>Ahorro |U-Subscriptions</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de U-Subscriptions">
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-buscar.png" alt="">
+                        <span>Convenios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-notificaciones.png" alt="">
+                        <span>Notificaciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-ahorro.png" alt="">
+                        <span>Ahorros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-pagos.png" alt="">
+                        <span>Pagos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-perfil.png" alt="">
+                        <span>Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="favoritos">
+            <div class="favoritos-header">
+                <img src="images/iconos/icono-corazon.png" alt="Favoritos">
+                <button type="button" class="btn-buscar">
+                    <img src="images/iconos/icono-buscar.png" alt="Buscar">
+                </button>
+            </div>
+
+            <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="servicio-card">
+                            <div class="servicio-icono">
+                                
+                            </div>
+                            <div class="servicio-info">
+                                <p class="servicio-nombre">Servicio</p>
+                                <p class="servicio-cuenta">Cuenta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="servicio-card">
+                            <div class="servicio-icono"></div>
+                            <div class="servicio-info">
+                                <p class="servicio-nombre">Servicio</p>
+                                <p class="servicio-cuenta">Cuenta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="servicio-card">
+                            <div class="servicio-icono"></div>
+                            <div class="servicio-info">
+                                <p class="servicio-nombre">Servicio</p>
+                                <p class="servicio-cuenta">Cuenta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="graficas">
+            <h2>Gráficas</h2>
+            <div class="graficas-contenido">
+                <ul class="graficas-lista">
+                    <li>Spotify</li>
+                    <li>Canva</li>
+                    <li>Otro</li>
+                </ul>
+                <div class="grafica-icono">
+                    
+                </div>
+                <div class="graficas-acciones">
+                    <button type="button" class="btn-compartir">
+                        <img src="images/iconos/icono-compartir.png" alt="Compartir">
+                    </button>
+                    <button type="button" class="btn-ver-mas">Ver gráfica completa</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="ahorro">
+            <p>Haz ahorrado:</p>
+            <p class="monto-ahorro">$100</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <img src="images/—Pngtree—instagram logo icon vector_3588821.png" alt="Instagram" width="24" height="24">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="images/facebook-circle-logo-png.webp" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <img src="images/—Pngtree—whatsapp mobile app icon vector_8704828.png" alt="WhatsApp" width="24" height="24">
+        </a>
+      </div>
+      <p class="footer-text">Síguenos para nuevas promociones</p>
+    </footer>
+</body>
+</html>
