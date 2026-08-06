@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Convenios | U-Subscriptions</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de U-Subscriptions">
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-buscar.png" alt="">
+                        <span>Convenios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-notificaciones.png" alt="">
+                        <span>Notificaciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-ahorro.png" alt="">
+                        <span>Ahorros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-pagos.png" alt="">
+                        <span>Pagos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/iconos/icono-perfil.png" alt="">
+                        <span>Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="convenios">
+    <h1>Convenios</h1>
+
+    <!-- Carrusel de servicios (mismo patrón que ya armamos antes) -->
+    <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="servicio-card">
+                    <div class="servicio-icono"></div>
+                    <div class="servicio-info">
+                        <p class="servicio-nombre">Servicio</p>
+                        <p class="servicio-cuenta">Cuenta</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="servicio-card">
+                    <div class="servicio-icono"></div>
+                    <div class="servicio-info">
+                        <p class="servicio-nombre">Servicio</p>
+                        <p class="servicio-cuenta">Cuenta</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="servicio-card">
+                    <div class="servicio-icono"></div>
+                    <div class="servicio-info">
+                        <p class="servicio-nombre">Servicio</p>
+                        <p class="servicio-cuenta">Cuenta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </div>
+
+    <!-- Barra de filtro -->
+    <form class="barra-filtro">
+        <div class="filtro-campos">
+            <label for="filtro-compania">Compañía</label>
+            <input type="text" id="filtro-compania" name="compania">
+            <span class="separador">|</span>
+            <label for="filtro-cuenta">Cuenta</label>
+            <input type="text" id="filtro-cuenta" name="cuenta">
+        </div>
+        <button type="submit" class="btn-filtrar">Filtrar</button>
+    </form>
+
+    <!-- Grilla de tarjetas de convenios -->
+    <div class="grilla-convenios">
+        <article class="tarjeta-convenio">
+            <div class="tarjeta-header">
+                <img src="images/marcas/marca-spotify.png" alt="Spotify">
+                <span class="badge-estado">Vence pronto</span>
+                <button type="button" class="btn-favorito">
+                    <img src="images/iconos/icono-favoritos.png" alt="Favorito">
+                </button>
+            </div>
+            <p class="tarjeta-compania">Compañía</p>
+            <p class="tarjeta-cuenta">Cuenta</p>
+            <button type="button" class="btn-ver-mas">Ver más</button>
+        </article>
+
+        <article class="tarjeta-convenio">
+            <div class="tarjeta-header">
+                <img src="images/marcas/marca-canva.png" alt="Canva">
+                <span class="badge-estado">Vence pronto</span>
+                <button type="button" class="btn-favorito">
+                    <img src="images/iconos/icono-favoritos.png" alt="Favorito">
+                </button>
+            </div>
+            <p class="tarjeta-compania">Compañía</p>
+            <p class="tarjeta-cuenta">Cuenta</p>
+            <button type="button" class="btn-ver-mas">Ver más</button>
+        </article>
+
+        <article class="tarjeta-convenio">
+            <div class="tarjeta-header">
+                <img src="images/marcas/marca-adidas.png" alt="Adidas">
+                <span class="badge-estado">Vence pronto</span>
+                <button type="button" class="btn-favorito">
+                    <img src="images/iconos/icono-favoritos.png" alt="Favorito">
+                </button>
+            </div>
+            <p class="tarjeta-compania">Compañía</p>
+            <p class="tarjeta-cuenta">Cuenta</p>
+            <button type="button" class="btn-ver-mas">Ver más</button>
+        </article>
+
+        <article class="tarjeta-convenio">
+            <div class="tarjeta-header">
+                <img src="images/marcas/marca-notion.png" alt="Notion">
+                <span class="badge-estado">Vence pronto</span>
+                <button type="button" class="btn-favorito">
+                    <img src="images/iconos/icono-favoritos.png" alt="Favorito">
+                </button>
+            </div>
+            <p class="tarjeta-compania">Compañía</p>
+            <p class="tarjeta-cuenta">Cuenta</p>
+            <button type="button" class="btn-ver-mas">Ver más</button>
+        </article>
+    </div>
+</section>
+</main>
+
+
+    <footer class="site-footer">
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <img src="images/—Pngtree—instagram logo icon vector_3588821.png" alt="Instagram" width="24" height="24">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="images/facebook-circle-logo-png.webp" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <img src="images/—Pngtree—whatsapp mobile app icon vector_8704828.png" alt="WhatsApp" width="24" height="24">
+        </a>
+      </div>
+      <p class="footer-text">Síguenos para nuevas promociones</p>
+    </footer>
+</body>
+</html>
