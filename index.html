@@ -3,119 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | U-Subscriptions</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <title>U-Subscriptions</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo de U-Subscriptions">
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="images/iconos/icono-buscar.png" alt="">
-                        <span>Convenios</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/iconos/icono-notificaciones.png" alt="">
-                        <span>Notificaciones</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/iconos/icono-ahorro.png" alt="">
-                        <span>Ahorros</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/iconos/icono-pagos.png" alt="">
-                        <span>Pagos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/iconos/icono-perfil.png" alt="">
-                        <span>Perfil</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
 
 <section class="banner-promocional">
     <h1>U-subscriptions</h1>
     <h2>Estos y mil productos más los encontrarás con un descuento aqui en U-Subscriptions</h2>
 
-    <div id="carouselMarcas" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="marcas-aliadas">
-                    <img src="images/marcas/marca-adove-creative.png" alt="Adobe creative">
-                    <img src="images/marcas/marca-adidas.png" alt="Adidas">
-                    <img src="images/marcas/marca-spotify.png" alt="Spotify">
-                    <img src="images/marcas/marca-apple.png" alt="Apple Music">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="marcas-aliadas">
-                    <img src="images/marcas/marca-mcdonalds.png" alt="McDonald's">
-                    <img src="images/marcas/marca-notion.png" alt="Notion">
-                    <img src="images/marcas/marca-canva.png" alt="Canva">
-                    <img src="images/marcas/marca-lenovo.png" alt="Lenovo">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="marcas-aliadas">
-                    <img src="images/marcas/marca-samsung.png" alt="Samsung">
-                    <img src="images/marcas/marca-youtube.png" alt="YouTube">
-                    
-                </div>
-            </div>
-        </div>
+                <div class="lista-convenios">
 
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-    </div>
+                    <article class="tarjeta-convenio">
+                        <div class="cabecera-tarjeta">
+                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
+                            <span class="estado">Activo</span>
+                            <button class="favorito">♡</button>
+                        </div>
+                        <p>Compañía</p>
+                        <p>Cuenta</p>
+                        <a href="#" class="boton-ver-mas">Ver más</a>
+                    </article>
 
-    <a href="#" class="boton-saber-mas">Saber más</a>
-</section>
+                    <article class="tarjeta-convenio">
+                        <div class="cabecera-tarjeta">
+                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
+                            <span class="estado" style="background: #fff3e0; color: #f57c00;">Vence Pronto</span>
+                            <button class="favorito">♡</button>
+                        </div>
+                        <p>Compañía</p>
+                        <p>Cuenta</p>
+                        <a href="#" class="boton-ver-mas">Ver más</a>
+                    </article>
 
+            <!-- Tercera tarjeta añadida -->
+                    <article class="tarjeta-convenio">
+                        <div class="cabecera-tarjeta">
+                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
+                            <span class="estado" style="background: #ffebee; color: #c62828;">Deshabilitado</span>
+                            <button class="favorito">♡</button>
+                        </div>
+                        <p>Compañía</p>
+                        <p>Cuenta</p>
+                        <a href="#" class="boton-ver-mas">Ver más</a>
+                    </article>
+
+                 </div>
+        </section>
 
     </main>
-
-    <section aria-labelledby="Registro">
-        <h2 id="h2-registro">Registro</h2>
-        <div class="registro-contenido">
-            <p>Estos y mil productos mas los encuentras en U-Subscriptions</p>
-            <button type="button">Registrarse</button>                
-        </div>
-    </section>
-
-    <section aria-labelledby="Convenios">
-        <h2 id="h2-convenios">Todos los convenios</h2>
-        <article class="tarjeta-convenios">
-            <div class="convenios-botones">
-                <button type="button">Favorito</button>
-                <button type="button">Ver mas</button>                
-            </div>
-            <div class="convenios-contenido">
-                <img src="" alt="Imagen-Servicio">
-                <p>Servicio</p>
-                <p>Cuenta</p>                
-            </div>
-        </article>
-    </section>
 
     <footer class="site-footer">
       <div class="social-icons">
@@ -131,5 +68,19 @@
       </div>
       <p class="footer-text">Síguenos para nuevas promociones</p>
     </footer>
+
+<script>
+    document.querySelectorAll('.favorito').forEach(boton => {
+        boton.addEventListener('click', function() {
+            if (this.innerText === '♡') {
+                this.innerText = '♥';
+                this.style.color = '#e91e63'; 
+            } else {
+                this.innerText = '♡';
+                this.style.color = 'black'; 
+            }
+        });
+    });
+</script>
 </body>
 </html>
