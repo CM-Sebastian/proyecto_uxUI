@@ -2,19 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pagina perfil - Computadora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | U-Subscriptions</title>
+    <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
-
     <!-- Encabezado / Barra de navegación -->
     <header>
-        <div>
-            <!-- Logo de U-subscriptions -->
-             
-            <img src="../images/u-subs-logo 1.png" alt="Logo U-subscriptions">
-        
+        <div class="logo">
+            <img src="../images/u-subs-logo 1.png" alt="Logo de U-Subscriptions">
         </div>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#">Convenios</a></li>
                 <li><a href="#">Notificaciones</a></li>
@@ -25,122 +23,70 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Perfil</h1>
+    <main class="perfil-page">
+        <h1 class="page-title">Perfil</h1>
 
-        <section>
-            <div>
-                <h2>Tu</h2>
-                <div>
-                    <div>
-                        <img src="../images/Generic avatar.png" alt="Icono de usuario">
-                        <p>Nombres Cuenta</p>
+        <section class="perfil-section">
+            <article class="perfil-card">
+                <div class="section-title">Tu</div>
+                <div class="profile-card">
+                    <div class="profile-summary">
+                        <div class="profile-avatar">
+                            <img src="../images/Generic avatar.png" alt="Icono de usuario">
+                        </div>
+                        <div class="profile-info">
+                            <p>Nombres Cuenta</p>
+                        </div>
+                        <div class="profile-status">Matriculado</div>
                     </div>
-                    <div>
-                        <h3>Estado</h3>
-                        <p>Matriculado</p>
-                        <button type="button">Editar</button>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Editar</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div>
-                <h2>Otras cuentas</h2>
-                <div>
-                    <div>
-                        <img src="../images/Generic avatar.png" alt="Icono de usuario">
-                        <p>Cuenta registrada</p>
+            <article class="perfil-card">
+                <div class="section-title">Otras cuentas</div>
+                <div class="profile-card">
+                    <div class="profile-summary">
+                        <div class="profile-avatar">
+                            <img src="../images/Generic avatar.png" alt="Icono de usuario">
+                        </div>
+                        <div class="profile-info">
+                            <p>Cuenta registrada</p>
+                        </div>
+                        <div class="profile-status">Matriculado</div>
                     </div>
-                    <div>
-                        <h3>Estado</h3>
-                        <p>Matriculado</p>
-                        <button type="button">Editar</button>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Editar</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div>
-                <h2>Metodos de pago</h2>
-                <div>
-                    <div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 1">
+            <article class="perfil-card">
+                <div class="section-title">Métodos de pago</div>
+                <div class="profile-card">
+                    <div class="payment-grid">
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
                             <p>Banco Pichincha</p>
                         </div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 2">
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
                             <p>Banco Pichincha</p>
                         </div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 3">
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
                             <p>Banco Pichincha</p>
                         </div>
                     </div>
-                    <div>
-                        <button type="button">Configurar</button>
-                        <button type="button">Ver mas</button>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Configurar</button>
+                        <button class="button-secondary" type="button">Ver más</button>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
-
-        <section>
-            <div>
-                <h2>Tu</h2>
-                <div>
-                    <div>
-                        <img src="../images/Generic avatar.png" alt="Icono de usuario">
-                        <p>Nombres Cuenta</p>
-                    </div>
-                    <div>
-                        <h3>Estado</h3>
-                        <p>Matriculado</p>
-                        <button type="button">Editar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2>Otras cuentas</h2>
-                <div>
-                    <div>
-                        <img src="../images/Generic avatar.png" alt="Icono de usuario">
-                        <p>Cuenta registrada</p>
-                    </div>
-                    <div>
-                        <h3>Estado</h3>
-                        <p>Matriculado</p>
-                        <button type="button">Editar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2>Metodos de pago</h2>
-                <div>
-                    <div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 1">
-                            <p>Banco Pichincha</p>
-                        </div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 2">
-                            <p>Banco Pichincha</p>
-                        </div>
-                        <div>
-                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco 3">
-                            <p>Banco Pichincha</p>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="button">Configurar</button>
-                        <button type="button">Ver mas</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
-
 </body>
 </html>
