@@ -25,7 +25,10 @@ body {
 }
 
 main {
-  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 :root {
@@ -318,6 +321,7 @@ nav a[aria-disabled="true"] img {
   font-size: 1.5em;
   transition: transform 0.2s ease, color 0.2s ease;
   outline: none;
+  margin-bottom: 1rem;
 }
 
 .favorito:hover {
@@ -368,19 +372,19 @@ nav a[aria-disabled="true"] img {
    ========================================== */
 .main-container {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: var(--space-md);
+  max-width: 1280px;
+  margin: 1.5rem auto;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: 1.5rem;
 }
 
 /* Tarjeta Favoritos */
 .favoritos {
   border: 2px solid var(--color-primary);
   border-radius: var(--radius-card);
-  padding: var(--space-md);
+  padding: 1.5rem 2rem;
   background-color: var(--color-white);
   box-shadow: var(--shadow-sm);
 }
@@ -389,7 +393,7 @@ nav a[aria-disabled="true"] img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-md);
+  margin-bottom: 1.5rem;
 }
 
 .favoritos-header > img {
@@ -450,38 +454,38 @@ nav a[aria-disabled="true"] img {
 
 /* Tarjeta de Servicio */
 .servicio-card {
+  background-color: #c8bbfb;  /* O usa var(--color-primary-light) si tienes la variable */
+  border-radius: 50px;       /* Bordes curvos tipo pastilla como en Figma */
+  padding: 1.25rem 2rem;
+  margin: 1rem auto;
+  width: 90%;
   display: flex;
   align-items: center;
-  gap: var(--space-md);
-  background: var(--color-primary-light);
-  border-radius: var(--radius-pill);
-  padding: var(--spacing-sm) var(--space-md);
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .servicio-icono {
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
   border-radius: 50%;
-  background: var(--color-white);
-  border: 2px solid var(--color-primary);
   flex-shrink: 0;
-  object-fit: cover;
 }
 
 .servicio-info {
   text-align: center;
-  flex: 1;
 }
 
 .servicio-nombre {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-dark);
-  margin: 0 0 4px;
+  font-weight: bold;
+  color: #2b2b2b;
+  margin: 0;
 }
 
 .servicio-cuenta {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  font-size: 0.85rem;
+  color: #555555;
   margin: 0;
 }
 
@@ -509,18 +513,20 @@ nav a[aria-disabled="true"] img {
 .graficas h2 {
   text-align: center;
   color: var(--color-text-dark);
-  margin-bottom: var(--space-md);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1.75rem;
 }
 
 .graficas-contenido {
   border: 2px solid var(--color-primary);
   border-radius: var(--radius-card);
-  padding: var(--space-md);
+  padding: 2rem;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .graficas-lista {
@@ -598,9 +604,11 @@ nav a[aria-disabled="true"] img {
 .ahorro {
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-card);
-  padding: var(--space-md);
+  padding: 2rem 1.5rem;
   text-align: center;
   background-color: var(--color-white);
+  margin-top: 1.5rem;
+
 }
 
 .ahorro p {
@@ -661,13 +669,34 @@ nav a[aria-disabled="true"] img {
 /* ==========================================
    7. MEDIA QUERIES (Ajustes de Escritorio)
    ========================================== */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .graficas-contenido {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr; 
+    align-items: stretch; 
+    gap: 1.5rem;
+  }
+  .favoritos {
+    grid-column: 1 / -1;
+  }
 }
+.tarjeta-info,
+.graficas,
+.ahorro {
+  min-height: 180px;      /* Reduce el estiramiento vertical */
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+
 
 @media (min-width: 992px) {
   .banner-promocional {
@@ -698,4 +727,25 @@ nav a[aria-disabled="true"] img {
     width: auto;
     object-fit: contain;
   }
+}
+
+.tarjeta-info {
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.tarjeta-info h3 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-info p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+  margin: 0;
 }
