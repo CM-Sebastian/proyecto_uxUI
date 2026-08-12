@@ -1,0 +1,314 @@
+@import url('components.css');
+
+/*Registro*/
+.registro{
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 20px;
+
+}
+
+
+
+/*Parte de Anthony*/
+.convenios {
+    max-width: 1100px;  
+    margin: 0 auto;     
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.convenios h2 {
+    background: transparent;          
+    color: #000;                      
+    border: 3px solid #ff8c00;        
+    display: inline-block;
+    padding: 8px 35px;
+    border-radius: 30px;              
+    margin-bottom: 30px;
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.lista-convenios {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.tarjeta-convenio {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 280px;            
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-convenio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.cabecera-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cabecera-tarjeta img {
+    height: 30px;
+}
+
+.estado {
+    font-size: 0.8em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e0f7fa;
+}
+
+.favorito {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em; 
+    transition: transform 0.2s ease, color 0.2s ease;
+    outline: none;
+}
+
+.favorito:hover {
+    transform: scale(1.2);
+}
+
+.boton-ver-mas {
+    display: block;
+    margin-top: 15px;
+    background: #8a2be2;
+    color: #fff;
+    padding: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+    background: #6a1b9a;
+}
+
+.tarjeta-convenio .cabecera-tarjeta img {
+    height: 80px !important;
+    width: auto !important;
+    max-width: 120px !important;
+}
+
+.convenios-botones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.convenios-botones button {
+    background: #f0f0f0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.2s;
+}
+
+.convenios-botones button:hover {
+    background: #e0e0e0;
+}
+
+.convenios-contenido img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.site-footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    background: rgba(255, 255, 255, 0.1);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    background: #8a2be2;
+    transform: translateY(-3px);
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-text {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.tarjeta-convenio p:nth-of-type(1) {
+    font-weight: 700;       
+    font-size: 1.1em;       
+    color: #111;            
+    margin-top: 10px;
+}
+
+.tarjeta-convenio p:nth-of-type(2) {
+    font-weight: 400;      
+    font-size: 0.9em;       
+    color: #666;            
+    margin-bottom: 15px;
+}
+
+
+/* Sección completa */
+.banner-promocional {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.banner-promocional h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.banner-promocional h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+  line-height: 1.4;
+}
+
+/* Panel del carrusel */
+#carouselMarcas {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-lg);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.marcas-aliadas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.marcas-aliadas img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Indicadores del carrusel (los puntitos) */
+#carouselMarcas .carousel-indicators [data-bs-target] {
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+#carouselMarcas .carousel-indicators .active {
+  background-color: var(--color-accent);
+  opacity: 1;
+}
+
+#carouselMarcas .carousel-indicators {
+  position: static;
+  margin: var(--spacing-sm) 3rem 0;
+}
+
+/* Botón Saber más */
+.boton-saber-mas {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #1d2433;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease;
+}
+
+.boton-saber-mas:hover {
+  background-color: var(--color-accent-light);
+}
+
+.boton-saber-mas:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+@media (min-width: 992px) {
+  .banner-promocional {
+    padding: 3rem 2rem;
+  }
+
+  .banner-promocional h1 {
+    font-size: 2.75rem;
+  }
+
+  .banner-promocional h2 {
+    font-size: 1.5rem;
+    max-width: 900px;
+  }
+
+  #carouselMarcas {
+    max-width: 1100px;
+    padding: 2rem 3rem;
+  }
+
+  .marcas-aliadas {
+    gap: 3rem;
+  }
+
+  .marcas-aliadas img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+  }
+}
