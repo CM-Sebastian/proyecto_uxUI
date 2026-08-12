@@ -1,30 +1,47 @@
+/* ==========================================
+   1. RESET & VARIABLES GLOBALES (UI Kit)
+   ========================================== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
+  font-family: var(--font-family-base, 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  background-color: var(--color-bg, #F8FAFC);
+  color: var(--color-text-dark, #111111);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 :root {
   /* Colores del UI Kit */
   --color-primary: #7C3AED;
-  --color-primary-dark: #6a1b9a;
-  --color-primary-light: #C3A5F8;
+  --color-primary-dark: #6D28D9;
+  --color-primary-light: #C4B5FD;
   --color-accent: #F59E0B;
   --color-accent-light: #FFCC77;
-  --color-text-dark: #111111;
-  --color-text-muted: #666666;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #64748B;
   --color-white: #FFFFFF;
-  --color-disabled: #E0E0E0;
-  --color-text-disabled: #9E9E9E;
+  --color-bg: #F8FAFC;
+  --color-disabled: #E2E8F0;
+  --color-text-disabled: #94A3B8;
+  --color-border: #E2E8F0;
 
   /* Tipografía */
   --font-family-base: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -34,12 +51,12 @@ body {
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
-  /* Espaciado del banner */
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
+  /* Espaciado Relativo */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 2rem;     /* 32px */
 
-  /* Espaciado del header / nav */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -50,14 +67,17 @@ body {
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-nav: 16px;
-  --radius-pill: 999px;
+  --radius-card: 28px;
+  --radius-pill: 9999px;
 
-  /* Otros */
+  /* Transiciones y Sombras */
   --transition-fast: 0.2s ease;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Header ===== */
+/* ==========================================
+   2. HEADER & NAVEGACIÓN
+   ========================================== */
 header {
   display: flex;
   align-items: center;
@@ -75,7 +95,6 @@ header {
   object-fit: contain;
 }
 
-/* ===== Navegación ===== */
 nav ul {
   display: flex;
   align-items: center;
@@ -141,7 +160,9 @@ nav a[aria-disabled="true"] img {
   filter: grayscale(100%);
 }
 
-/* ===== Banner promocional ===== */
+/* ==========================================
+   3. BANNER Y CARRUSEL DE MARCAS (General)
+   ========================================== */
 .banner-promocional {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -162,7 +183,6 @@ nav a[aria-disabled="true"] img {
   line-height: 1.4;
 }
 
-/* ===== Panel del carrusel de marcas ===== */
 #carouselMarcas {
   max-width: 900px;
   margin: 0 auto var(--space-lg);
@@ -187,11 +207,9 @@ nav a[aria-disabled="true"] img {
   flex-shrink: 1;
 }
 
-/* Indicadores del carrusel (los puntitos) */
 #carouselMarcas .carousel-indicators {
   position: static;
-  margin: var(--space-sm) 4rem ;
-  
+  margin: var(--space-sm) 4rem;
 }
 
 #carouselMarcas .carousel-indicators [data-bs-target] {
@@ -207,7 +225,6 @@ nav a[aria-disabled="true"] img {
   background-color: var(--color-accent);
   opacity: 1;
 }
-
 
 .boton-saber-mas {
   display: inline-block;
@@ -229,7 +246,9 @@ nav a[aria-disabled="true"] img {
   outline-offset: 3px;
 }
 
-/* ===== Sección de convenios ===== */
+/* ==========================================
+   4. CONVENIOS & TARJETAS
+   ========================================== */
 .convenios {
   max-width: 1100px;
   margin: 0 auto;
@@ -257,7 +276,6 @@ nav a[aria-disabled="true"] img {
   padding: 0;
 }
 
-/* ===== Tarjeta de convenio ===== */
 .tarjeta-convenio {
   background: #fff;
   padding: 20px;
@@ -280,8 +298,6 @@ nav a[aria-disabled="true"] img {
   margin-bottom: 10px;
 }
 
-/* Único selector para el logo de la tarjeta: sin !important,
-   gana por especificidad frente a reglas más generales */
 .tarjeta-convenio .cabecera-tarjeta img {
   height: 80px;
   width: auto;
@@ -347,13 +363,266 @@ nav a[aria-disabled="true"] img {
   margin-bottom: 15px;
 }
 
-/* ===== Footer ===== */
+/* ==========================================
+   5. PANEL DE AHORRO (panel_ahorro.html)
+   ========================================== */
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Tarjeta Favoritos */
+.favoritos {
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.favoritos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.favoritos-header > img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.input-buscar {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.input-buscar:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.input-buscar::placeholder {
+  color: var(--color-text-muted);
+}
+
+.btn-buscar {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-pill);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.btn-buscar:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-buscar img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* Tarjeta de Servicio */
+.servicio-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--color-primary-light);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-sm) var(--space-md);
+}
+
+.servicio-icono {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.servicio-info {
+  text-align: center;
+  flex: 1;
+}
+
+.servicio-nombre {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 4px;
+}
+
+.servicio-cuenta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+#carouselServicios .carousel-indicators {
+  position: static;
+  margin-top: var(--space-sm);
+}
+
+#carouselServicios .carousel-indicators [data-bs-target] {
+  background-color: var(--color-primary-light);
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: width var(--transition-fast);
+}
+
+#carouselServicios .carousel-indicators .active {
+  background-color: var(--color-primary);
+  width: 24px;
+  border-radius: var(--radius-pill);
+}
+
+/* Sección de Gráficas */
+.graficas h2 {
+  text-align: center;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-md);
+  font-size: 1.75rem;
+}
+
+.graficas-contenido {
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.graficas-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 var(--space-sm);
+  border-left: 4px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.graficas-lista li {
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
+}
+
+.grafica-icono {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graficas-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-compartir {
+  background: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.btn-compartir:hover {
+  background-color: var(--color-accent-light);
+}
+
+.btn-compartir img {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-ver-mas {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+
+.btn-ver-mas:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-ver-mas:focus-visible {
+  outline: 3px solid var(--color-accent);
+}
+
+/* Sección Ahorro Total */
+.ahorro {
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.ahorro p {
+  margin: 0;
+  color: var(--color-text-dark);
+}
+
+.monto-ahorro {
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-bold);
+  margin-top: 8px !important;
+}
+
+/* ==========================================
+   6. FOOTER
+   ========================================== */
 .site-footer {
   background: #222;
   color: #fff;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 60px;
+  margin-top: auto;
 }
 
 .social-icons {
@@ -389,28 +658,17 @@ nav a[aria-disabled="true"] img {
   font-size: 0.9em;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+/* ==========================================
+   7. MEDIA QUERIES (Ajustes de Escritorio)
+   ========================================== */
+@media (min-width: 768px) {
+  .graficas-contenido {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-main {
-  flex: 1;
-}
-
-
-.site-footer {
-  margin-top: auto; 
-}
-
-/* ===== Ajustes para escritorio ===== */
 @media (min-width: 992px) {
   .banner-promocional {
     padding: 3rem 2rem;
