@@ -14,7 +14,9 @@
 }
 
 
-/* ===== Banner promocional ===== */
+/* ==========================================
+   3. BANNER Y CARRUSEL DE MARCAS (General)
+   ========================================== */
 .banner-promocional {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -28,7 +30,6 @@
 }
 
 
-/* ===== Panel del carrusel de marcas ===== */
 #carouselMarcas {
   max-width: 900px;
   margin: 0 auto var(--space-lg);
@@ -53,11 +54,9 @@
   flex-shrink: 1;
 }
 
-/* Indicadores del carrusel (los puntitos) */
 #carouselMarcas .carousel-indicators {
   position: static;
-  margin: var(--space-sm) 4rem ;
-  
+  margin: var(--space-sm) 4rem;
 }
 
 #carouselMarcas .carousel-indicators [data-bs-target] {
@@ -73,7 +72,6 @@
   background-color: var(--color-accent);
   opacity: 1;
 }
-
 
 .boton-saber-mas {
   display: inline-block;
@@ -95,7 +93,9 @@
   outline-offset: 3px;
 }
 
-/* ===== Sección de convenios ===== */
+/* ==========================================
+   4. CONVENIOS & TARJETAS
+   ========================================== */
 .convenios {
     max-width: 1100px;  
     margin: 0 auto;     
@@ -115,7 +115,6 @@
   padding: 0;
 }
 
-/* ===== Tarjeta de convenio ===== */
 .tarjeta-convenio {
   background: #fff;
   padding: 20px;
@@ -138,8 +137,6 @@
   margin-bottom: 10px;
 }
 
-/* Único selector para el logo de la tarjeta: sin !important,
-   gana por especificidad frente a reglas más generales */
 .tarjeta-convenio .cabecera-tarjeta img {
   height: 80px;
   width: auto;
@@ -160,6 +157,7 @@
   font-size: 1.5em;
   transition: transform 0.2s ease, color 0.2s ease;
   outline: none;
+  margin-bottom: 1rem;
 }
 
 .favorito:hover {
@@ -312,6 +310,7 @@
   border-radius: var(--radius-pill);
   transition: background-color 0.2s ease;
 }
+  
 
 .boton-saber-mas:hover {
   background-color: var(--color-accent-light);
