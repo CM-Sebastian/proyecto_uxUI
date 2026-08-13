@@ -159,6 +159,7 @@ body {
     transition: all 0.25s ease;
 }
 
+/*Seccion hecha por Anthony Uribe*/
 .btn-outline-purple:hover {
     background-color: var(--purple-main);
     color: white;
