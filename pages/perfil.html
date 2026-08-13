@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U-Subscriptions - Mi Perfil</title>
+    <title>U-Subscriptions - Perfil</title>
+    <!-- FontAwesome y Estilos Globales / Locales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
 
+    <!-- CABECERA -->
     <header class="main-header">
         <div class="logo-container">
             <a href="inicio.html">
@@ -18,89 +21,161 @@
 
         <nav class="icon-nav">
             <a href="#" class="nav-item">
-                <div class="icon-wrapper">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <div class="icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <span>Convenios</span>
             </a>
-
             <a href="#" class="nav-item">
-                <div class="icon-wrapper">
-                    <i class="fa-regular fa-bell"></i>
-                </div>
+                <div class="icon-wrapper"><i class="fa-regular fa-bell"></i></div>
                 <span>Notificaciones</span>
             </a>
-
             <a href="#" class="nav-item">
-                <div class="icon-wrapper">
-                    <i class="fa-solid fa-wallet"></i>
-                </div>
+                <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
                 <span>Ahorro</span>
             </a>
-
             <a href="pagos.html" class="nav-item">
-                <div class="icon-wrapper">
-                    <i class="fa-solid fa-credit-card"></i>
-                </div>
+                <div class="icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
                 <span>Pagos</span>
             </a>
-
-            <!-- PÁGINA ACTIVA (Perfil) -->
             <a href="perfil.html" class="nav-item active">
-                <div class="icon-wrapper">
-                    <i class="fa-regular fa-user"></i>
-                </div>
+                <div class="icon-wrapper"><i class="fa-regular fa-user"></i></div>
                 <span>Perfil</span>
             </a>
         </nav>
     </header>
 
+    <!-- BANNER DE TÍTULO -->
     <div class="title-banner-wrapper">
-        <h1 class="page-title-banner">Perfil de usuario</h1>
+        <h1 class="page-title-banner">Perfil</h1>
     </div>
 
-    <main class="profile-card">
-        <div class="profile-header">
-            <div class="avatar-wrapper">
-                <img src="../images/Generic avatar.png" alt="Foto de Perfil" class="profile-avatar">
-                <button class="btn-edit-avatar" title="Cambiar foto">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-            <h2 class="user-name">Usuario Institucional</h2>
-            <p class="user-role">Estudiante Universitario</p>
-        </div>
+    <!-- GRID PRINCIPAL DE TRES COLUMNAS -->
+    <main class="perfil-grid-container">
 
-        <!-- Formulario de Datos del Usuario -->
-        <form class="profile-form">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" placeholder="Anthony Uribe">
+        <!-- COLUMNA 1: TU -->
+        <section class="perfil-column">
+            <div class="column-pill-title">Tu</div>
+
+            <!-- Fila 1 -->
+            <div class="account-card">
+                <div class="account-left">
+                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
+                    <div class="account-labels">
+                        <span class="label-title">Nombres</span>
+                        <span class="label-subtitle">Cuenta</span>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="correo">Correo Institucional</label>
-                    <input type="email" id="correo" placeholder="estudiante@puce.edu.ec">
-                </div>
-
-                <div class="form-group">
-                    <label for="universidad">Universidad / Institución</label>
-                    <input type="text" id="universidad" placeholder="PUCE">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono">Teléfono de contacto</label>
-                    <input type="text" id="telefono" placeholder="Añadir número...">
+                <div class="account-right-box">
+                    <span class="status-title">Estado</span>
+                    <span class="status-subtitle">Matriculado</span>
+                    <button class="btn-purple-sm">Editar</button>
                 </div>
             </div>
 
-            <!-- Botones de Acción -->
-            <div class="profile-actions">
-                <button type="button" class="btn-profile btn-secondary">Editar Datos</button>
-                <button type="submit" class="btn-profile btn-primary">Guardar Cambios</button>
+            <!-- Fila 2 -->
+            <div class="account-card">
+                <div class="account-left">
+                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
+                    <div class="account-labels">
+                        <span class="label-title">Nombres</span>
+                        <span class="label-subtitle">Cuenta</span>
+                    </div>
+                </div>
+                <div class="account-right-box">
+                    <span class="status-title">Estado</span>
+                    <span class="status-subtitle">Matriculado</span>
+                    <button class="btn-purple-sm">Editar</button>
+                </div>
             </div>
-        </form>
+        </section>
+
+
+        <!-- COLUMNA 2: OTRAS CUENTAS -->
+        <section class="perfil-column">
+            <div class="column-pill-title">Otras cuentas</div>
+
+            <!-- Fila 1 -->
+            <div class="account-card">
+                <div class="account-left">
+                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
+                    <div class="account-labels">
+                        <span class="label-title">Cuenta</span>
+                        <span class="label-subtitle">registrada</span>
+                    </div>
+                </div>
+                <div class="account-right-box">
+                    <span class="status-title">Estado</span>
+                    <span class="status-subtitle">Matriculado</span>
+                    <button class="btn-purple-sm">Editar</button>
+                </div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="account-card">
+                <div class="account-left">
+                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
+                    <div class="account-labels">
+                        <span class="label-title">Cuenta</span>
+                        <span class="label-subtitle">registrada</span>
+                    </div>
+                </div>
+                <div class="account-right-box">
+                    <span class="status-title">Estado</span>
+                    <span class="status-subtitle">Matriculado</span>
+                    <button class="btn-purple-sm">Editar</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- COLUMNA 3: MÉTODOS DE PAGO -->
+        <section class="perfil-column">
+            <div class="column-pill-title">Métodos de pago</div>
+
+            <!-- Fila 1 -->
+            <div class="payment-methods-card">
+                <div class="bank-icons-row">
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                </div>
+                <div class="payment-actions">
+                    <button class="btn-purple-md">Configurar</button>
+                    <button class="btn-outline-orange">Ver mas</button>
+                </div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="payment-methods-card">
+                <div class="bank-icons-row">
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                    <div class="bank-item">
+                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
+                        <span class="bank-tag">Banco P...</span>
+                    </div>
+                </div>
+                <div class="payment-actions">
+                    <button class="btn-purple-md">Configurar</button>
+                    <button class="btn-outline-orange">Ver mas</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </body>

@@ -1,8 +1,10 @@
+/* ==========================================
+   1. VARIABLES Y ESTILOS BASE
+   ========================================== */
 :root {
     --purple-main: #7b42fb;
     --purple-dark: #622ad8;
-    --purple-light-bg: #e6dcff;
-    --purple-input: #cbb4fc;
+    --purple-light-bg: #d9c8ff;
     --orange-accent: #f59e0b;
     --text-dark: #1a1a1a;
     --bg-white: #ffffff;
@@ -25,14 +27,16 @@ body {
     align-items: center;
 }
 
-
+/* ==========================================
+   2. NAVEGACIÓN Y BANNER
+   ========================================== */
 .main-header {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: 10px 0;
 }
 
@@ -44,14 +48,9 @@ body {
     padding: 5px 22px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(123, 66, 251, 0.1);
 }
 
-.nav-logo {
-    height: 40px;
-    width: auto;
-}
+.nav-logo { height: 40px; width: auto; }
 
 .icon-nav {
     display: flex;
@@ -69,44 +68,28 @@ body {
     font-weight: 700;
     font-size: 0.85rem;
     gap: 6px;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.nav-item:hover {
-    transform: translateY(-6px);
-    color: var(--purple-main);
-}
+.nav-item:hover { transform: translateY(-4px); }
 
 .icon-wrapper {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    font-size: 1.3rem;
-    transition: all 0.25s ease;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 14px; font-size: 1.3rem;
 }
 
 .nav-item.active .icon-wrapper {
-    background-color: var(--purple-light-bg);
+    background-color: #e6dcff;
     border: 2px solid var(--purple-main);
     color: var(--purple-main);
-    box-shadow: 0 4px 12px rgba(123, 66, 251, 0.18);
 }
 
-.nav-item.active span {
-    color: var(--purple-main);
-}
-
-.nav-item.active:hover {
-    transform: translateY(-7px);
-}
-
+.nav-item.active span { color: var(--purple-main); }
 
 .title-banner-wrapper {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -117,153 +100,192 @@ body {
     color: white;
     font-size: 1.3rem;
     font-weight: 700;
-    padding: 10px 80px;
+    padding: 8px 90px;
     border-radius: 25px;
-    text-align: center;
 }
 
-
-.profile-card {
-    background-color: var(--purple-light-bg);
-    border-radius: 30px;
-    padding: 35px 40px;
+/* ==========================================
+   3. ESTRUCTURA EN 3 COLUMNAS
+   ========================================== */
+.perfil-grid-container {
     width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 6px 20px rgba(123, 66, 251, 0.08);
-}
-
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 25px;
-}
-
-.avatar-wrapper {
-    position: relative;
-    width: 110px;
-    height: 110px;
-}
-
-.profile-avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--purple-main);
-    background-color: white;
-}
-
-.btn-edit-avatar {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: var(--purple-main);
-    color: white;
-    border: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    transition: background-color 0.2s ease;
-}
-
-.btn-edit-avatar:hover {
-    background-color: var(--purple-dark);
-}
-
-.user-name {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1a1a1a;
-}
-
-.user-role {
-    font-size: 0.9rem;
-    color: #555;
-    font-weight: 600;
-}
-
-.profile-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.form-grid {
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.perfil-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
-.form-group {
+/* Pastilla de título para cada columna */
+.column-pill-title {
+    border: 2px solid var(--orange-accent);
+    background-color: white;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 45px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* ==========================================
+   4. TARJETAS DE CUENTAS (TU / OTRAS CUENTAS)
+   ========================================== */
+.account-card {
+    background-color: var(--purple-light-bg);
+    width: 100%;
+    border-radius: 30px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.account-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.account-labels {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-}
-
-.form-group label {
-    font-size: 0.85rem;
     font-weight: 700;
-    color: #333;
-}
-
-.form-group input {
-    width: 100%;
-    background-color: var(--bg-white);
-    border: 1.5px solid transparent;
-    border-radius: 18px;
-    padding: 10px 16px;
     font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s ease;
+    color: #000;
+    line-height: 1.2;
 }
 
-.form-group input:focus {
-    border-color: var(--purple-main);
-}
-
-.profile-actions {
+/* Sub-tarjeta blanca interior */
+.account-right-box {
+    background-color: white;
+    border: 2px solid var(--purple-main);
+    border-radius: 25px;
+    padding: 10px 18px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
 }
 
-.btn-profile {
-    border-radius: 20px;
-    padding: 10px 28px;
-    font-weight: 700;
+.status-title {
+    font-weight: 800;
     font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.btn-primary {
+.status-subtitle {
+    font-size: 0.72rem;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.btn-purple-sm {
     background-color: var(--purple-main);
     color: white;
     border: none;
+    border-radius: 15px;
+    padding: 5px 22px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-.btn-primary:hover {
+.btn-purple-sm:hover {
     background-color: var(--purple-dark);
 }
 
-.btn-secondary {
-    background-color: var(--bg-white);
-    border: 2px solid var(--orange-accent);
-    color: var(--orange-accent);
+/* ==========================================
+   5. TARJETAS DE MÉTODOS DE PAGO
+   ========================================== */
+.payment-methods-card {
+    background-color: white;
+    border: 2px solid var(--purple-main);
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.btn-secondary:hover {
-    background-color: var(--orange-accent);
+.bank-icons-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.bank-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.bank-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--purple-main);
+    object-fit: cover;
+}
+
+.bank-tag {
+    background-color: #d0baff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.payment-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-purple-md {
+    background-color: var(--purple-main);
     color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 7px 24px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.btn-outline-orange {
+    background-color: white;
+    border: 2px solid var(--orange-accent);
+    color: var(--orange-accent);
+    border-radius: 18px;
+    padding: 7px 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
 }
