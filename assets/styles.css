@@ -488,6 +488,21 @@ nav a[aria-disabled="true"] img {
   color: #555555;
   margin: 0;
 }
+#carouselServicios .servicio-icono {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#carouselServicios .servicio-icono img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 #carouselServicios .carousel-indicators {
   position: static;
@@ -748,4 +763,179 @@ nav a[aria-disabled="true"] img {
   font-size: var(--font-size-base);
   color: var(--color-text-dark);
   margin: 0;
+}
+
+/* ==========================================
+   8. BUSCAR CONVENIOS (buscar-convenios.html)
+   ========================================== */
+.convenios h1 {
+  color: var(--color-text-dark);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+
+.servicio-destacado {
+  max-width: 100%;
+  margin: 0 auto var(--space-lg);
+}
+.servicio-destacado .servicio-card {
+  width: 100%;
+  max-width: none;
+  border: 3px solid var(--color-primary);
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.servicio-destacado .servicio-icono {
+  width: 64px;
+  height: 64px;
+}
+
+.servicio-destacado .servicio-nombre {
+  font-size: 1.25rem;
+}
+
+.servicio-destacado .servicio-cuenta {
+  font-size: 1rem;
+}
+
+
+.barra-filtro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  max-width: 700px;
+  margin: 0 auto var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.filtro-campos {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+.filtro-campos label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  white-space: nowrap;
+}
+
+.filtro-campos input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+  width: 100%;
+  min-width: 0;
+}
+
+.filtro-campos .separador {
+  color: var(--color-border);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn-filtrar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+.btn-filtrar:hover { background: var(--color-primary-dark); }
+.btn-filtrar:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+/* Grilla de tarjetas */
+.grilla-convenios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-md);
+}
+
+.tarjeta-convenio {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md);
+  text-align: left;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.tarjeta-convenio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tarjeta-header img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+.badge-estado {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+.btn-favorito img { width: 20px; height: 20px; }
+.btn-favorito:hover { transform: scale(1.15); }
+.btn-favorito:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.tarjeta-compania {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0.25rem 0;
+}
+
+.tarjeta-cuenta {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+}
+
+.tarjeta-convenio .btn-ver-mas {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
