@@ -27,13 +27,6 @@
   margin-bottom: var(--space-sm);
 }
 
-.banner-promocional h2 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto var(--space-lg);
-  line-height: 1.4;
-}
 
 /* ===== Panel del carrusel de marcas ===== */
 #carouselMarcas {
@@ -112,19 +105,7 @@
     align-items: center;
 }
 
-.convenios h2 {
-    background: transparent;          
-    color: #000;                      
-    border: 3px solid #ff8c00;        
-    display: inline-block;
-    padding: 8px 35px;
-    border-radius: 30px;              
-    margin-bottom: 30px;
-    margin-left: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
 
-}
 
 .lista-convenios {
   display: flex;
@@ -214,6 +195,45 @@
   font-weight: 700;
   font-size: 1.1em;
   color: #111;
+
+/* Mejoras visuales para párrafos en secciones importantes */
+.main-container section p {
+  color: rgba(17,17,17,0.92);
+  line-height: 1.7;
+  font-size: 0.98rem;
+  margin-bottom: 0.6rem;
+}
+
+.banner-promocional p, .tarjeta-info p {
+  color: rgba(0,0,0,0.8);
+  font-size: 1.05rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+
+/* Hacer los párrafos de las tarjetas más llamativos */
+.tarjeta-convenio p:nth-of-type(1) {
+  color: #0f1721;
+}
+
+.tarjeta-convenio p:nth-of-type(2) {
+  color: rgba(17,17,17,0.7);
+}
+
+@media (max-width: 640px) {
+  .main-container section p {
+    font-size: 1rem;
+  }
+  .banner-promocional p, .tarjeta-info p {
+    font-size: 1rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
   margin-top: 10px;
 }
 
@@ -238,13 +258,6 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.banner-promocional h2 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto var(--spacing-lg);
-  line-height: 1.4;
-}
 
 /* Panel del carrusel */
 #carouselMarcas {
@@ -316,11 +329,6 @@
 
   .banner-promocional h1 {
     font-size: 2.75rem;
-  }
-
-  .banner-promocional h2 {
-    font-size: 1.5rem;
-    max-width: 900px;
   }
 
   #carouselMarcas {
