@@ -331,3 +331,355 @@ input:focus {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
+@media (min-width:768px) {
+    
+}
+/* =========================================================
+   DISEÑO RESPONSIVE
+   ========================================================= */
+
+/* TABLET: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        padding: 24px 16px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.65rem;
+    }
+
+    .hero-container {
+        max-width: 850px;
+        gap: 25px;
+    }
+
+    .animated-logo-wrapper {
+        right: 55px;
+        top: 145px;
+    }
+
+    .moving-logo {
+        max-width: 145px;
+    }
+
+    .hero-container.shift-left .animated-logo-wrapper {
+        transform: translate(-420px, -120px) scale(1.45);
+    }
+
+    .hero-left {
+        padding-top: 40px;
+    }
+
+    .hero-description {
+        max-width: 290px;
+        font-size: 1rem;
+    }
+
+    .hero-highlight {
+        font-size: 1rem;
+    }
+
+    .hero-right {
+        min-height: 420px;
+    }
+
+    .logo-placeholder-right {
+        height: 145px;
+    }
+
+    .form-card {
+        max-width: 360px;
+        padding: 26px 28px;
+    }
+}
+
+
+/* TELÉFONO: hasta 767px */
+@media (max-width: 767px) {
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        padding: 14px 12px 24px;
+        overflow-x: hidden;
+    }
+
+    /* Cabecera y navegación */
+    header {
+        width: 100%;
+        padding: 10px 12px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 2px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        border-radius: 12px;
+    }
+
+    nav a img {
+        width: 23px;
+        height: 23px;
+    }
+
+    nav a span {
+        font-size: 0.65rem;
+    }
+
+    /* Contenido principal */
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 520px;
+        gap: 8px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    /*
+       En teléfono el logo se centra sobre la presentación
+       para evitar que el desplazamiento absoluto del diseño
+       de escritorio provoque desbordamiento horizontal.
+    */
+    .animated-logo-wrapper {
+        right: 50%;
+        top: 18px;
+        transform: translateX(50%);
+        transition: transform 0.45s ease, opacity 0.3s ease;
+    }
+
+    .moving-logo {
+        max-width: 125px;
+    }
+
+    /*
+       Al abrir login/registro, el contenido de presentación
+       deja espacio al formulario y el logo desaparece.
+    */
+    .hero-container.shift-left .animated-logo-wrapper {
+        transform: translateX(50%) scale(0.7);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hero-left {
+        order: 1;
+        width: 100%;
+        padding-top: 145px;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-placeholder-left {
+        display: none;
+    }
+
+    /*
+       El h1 real del HTML recibe estilos de components.css.
+       Estas reglas lo adaptan sin cambiar su diseño base.
+    */
+    .hero-left h1 {
+        width: 100%;
+        max-width: 330px;
+        padding: 0.65rem 1rem;
+        font-size: 1.45rem;
+    }
+
+    .brand-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 360px;
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .hero-highlight {
+        max-width: 350px;
+        font-size: 0.95rem;
+        margin-top: 4px;
+    }
+
+    .hero-right {
+        order: 2;
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .initial-actions {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .logo-placeholder-right {
+        height: 70px;
+    }
+
+    .actions-pill-container {
+        width: min(100%, 340px);
+        padding: 9px 12px;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .actions-pill-container button {
+        min-width: 0;
+        flex: 1;
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.78rem;
+    }
+
+    /* Cuando aparece el formulario, se centra toda la atención en él. */
+    .hero-container.shift-left .hero-left {
+        display: none;
+    }
+
+    .hero-container.shift-left .hero-right {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+        padding: 24px 20px;
+        border-radius: 28px;
+    }
+
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 16px;
+    }
+
+    .dynamic-form {
+        gap: 11px;
+    }
+
+    .form-group label {
+        font-size: 0.78rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        min-height: 40px;
+        padding: 9px 14px;
+        font-size: 0.85rem;
+    }
+
+    .field-hint {
+        font-size: 0.62rem;
+        line-height: 1.35;
+    }
+
+    .switch-prompt {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .form-action {
+        margin-top: 8px;
+    }
+
+    .btn-submit {
+        min-width: 130px;
+        padding: 9px 25px;
+    }
+}
+
+
+/* TELÉFONOS MUY PEQUEÑOS: hasta 380px */
+@media (max-width: 380px) {
+
+    body {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    header {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    nav a {
+        padding: 5px 6px;
+    }
+
+    nav a img {
+        width: 21px;
+        height: 21px;
+    }
+
+    nav a span {
+        font-size: 0.6rem;
+    }
+
+    .hero-left {
+        padding-top: 135px;
+    }
+
+    .moving-logo {
+        max-width: 110px;
+    }
+
+    .hero-left h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-description,
+    .hero-highlight {
+        font-size: 0.88rem;
+    }
+
+    .actions-pill-container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .actions-pill-container button {
+        font-size: 0.72rem;
+    }
+
+    .form-card {
+        padding: 20px 15px;
+        border-radius: 24px;
+    }
+}
