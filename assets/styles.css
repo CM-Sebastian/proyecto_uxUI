@@ -454,8 +454,8 @@ nav a[aria-disabled="true"] img {
 
 /* Tarjeta de Servicio */
 .servicio-card {
-  background-color: #c8bbfb;  /* O usa var(--color-primary-light) si tienes la variable */
-  border-radius: 50px;       /* Bordes curvos tipo pastilla como en Figma */
+  background-color: #c8bbfb; 
+  border-radius: 50px;      
   padding: 1.25rem 2rem;
   margin: 1rem auto;
   width: 90%;
