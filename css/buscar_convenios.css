@@ -24,6 +24,12 @@ body {
   min-height: 100vh;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 main {
   width: 100%;
   max-width: 1200px;
@@ -173,18 +179,8 @@ nav a[aria-disabled="true"] img {
   padding: var(--space-lg) var(--space-md);
 }
 
-.banner-promocional h1 {
-  font-size: 2rem;
-  margin-bottom: var(--space-sm);
-}
 
-.banner-promocional h2 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto var(--space-lg);
-  line-height: 1.4;
-}
+
 
 #carouselMarcas {
   max-width: 900px;
@@ -258,9 +254,22 @@ nav a[aria-disabled="true"] img {
   padding: 20px 20px;
 }
 
+.convenios h1 {
+  margin: 0 0 var(--space-md);
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-white);
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 2rem;
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.18);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
 .convenios h2 {
   background: transparent;
-  color: #000;
+  color: var(--color-text-dark);
   border: 3px solid var(--color-accent);
   display: inline-block;
   padding: 8px 35px;
@@ -768,12 +777,7 @@ nav a[aria-disabled="true"] img {
 /* ==========================================
    8. BUSCAR CONVENIOS (buscar-convenios.html)
    ========================================== */
-.convenios h1 {
-  color: var(--color-text-dark);
-  font-size: 1.75rem;
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--space-md);
-}
+
 
 
 .servicio-destacado {
@@ -846,6 +850,18 @@ nav a[aria-disabled="true"] img {
 .filtro-campos .separador {
   color: var(--color-border);
   font-weight: var(--font-weight-bold);
+}
+
+.btn-filtrar,
+.btn-ver-mas,
+.btn-favorito,
+.btn-buscar,
+.btn-compartir {
+  min-width: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .btn-filtrar {
