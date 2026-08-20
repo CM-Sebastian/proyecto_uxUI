@@ -31,7 +31,7 @@
         </li>
 
         <li>
-          <a href="panel_ahorro.html">
+          <a href="panel_ahorro.html" class="active">
             <img src="../images/iconos/icono-ahorro.png" alt="Icono de ahorros">
             <span>Ahorros</span>
           </a>
@@ -54,13 +54,12 @@
 
     <main class="main-container">
         <section class="favoritos">
-            <div class="favoritos-header">
-                <img src="../images/iconos/icono-favoritos.png" alt="Favoritos">
-                 <div class="buscador">
-                    <input type="search" class="input-buscar" placeholder="Buscar suscripción..." aria-label="Buscar suscripción">
-                    <button type="button" class="btn-buscar">
-                        <img src="../images/iconos/icono-buscar.png" alt="Buscar">
-                    </button>
+      <div class="favoritos-header">
+        <button class="btn-favorito activo" aria-label="Favoritos">
+          <svg class="icono-corazon" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </button>
                 </div>
             </div>
 
@@ -69,28 +68,33 @@
                     <div class="carousel-item active">
                         <div class="servicio-card">
                             <div class="servicio-icono">
+                              <img src="../images/marcas/marca-spotify.png" alt="Spotify">
                                 
                             </div>
                             <div class="servicio-info">
-                                <p class="servicio-nombre">Servicio</p>
-                                <p class="servicio-cuenta">Cuenta</p>
+                                <p class="servicio-nombre">Spotify</p>
+                                <p class="servicio-cuenta">Cuenta Premium</p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="servicio-card">
-                            <div class="servicio-icono"></div>
+                            <div class="servicio-icono">
+                              <img src="../images/marcas/marca-canva.png" alt="Canva">
+                            </div>
                             <div class="servicio-info">
-                                <p class="servicio-nombre">Servicio</p>
-                                <p class="servicio-cuenta">Cuenta</p>
+                                <p class="servicio-nombre">Canva</p>
+                                <p class="servicio-cuenta">Cuenta Pro</p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="servicio-card">
-                            <div class="servicio-icono"></div>
+                            <div class="servicio-icono">
+                              <img src="../images/marcas/marca-lenovo.png" alt="Lenovo">
+                            </div>
                             <div class="servicio-info">
-                                <p class="servicio-nombre">Servicio</p>
+                                <p class="servicio-nombre">Lenovo</p>
                                 <p class="servicio-cuenta">Cuenta</p>
                             </div>
                         </div>
@@ -135,6 +139,42 @@
             <p class="monto-ahorro">$100</p>
         </section>
     </main>
+
+    <!-- NAVEGACIÓN INFERIOR PARA MÓVIL -->
+  <nav class="nav-mobile-bottom" aria-label="Navegación Móvil">
+    <ul>
+      <li>
+        <a href="index_tmp.html">
+          <img src="../images/logo.png" alt="">
+          <span>Convenios</span>
+        </a>
+      </li>
+      <li>
+        <a href="buscar-convenios.html">
+          <img src="../images/iconos/icono-buscar.png" alt="">
+          <span>Convenios</span>
+        </a>
+      </li>
+      <li>
+        <a href="panel_ahorro.html" class="active">
+          <img src="../images/iconos/icono-ahorro.png" alt="">
+          <span>Ahorros</span>
+        </a>
+      </li>
+      <li>
+        <a href="pagos.html">
+          <img src="../images/iconos/icono-pagos.png" alt="">
+          <span>Pagos</span>
+        </a>
+      </li>
+      <li>
+        <a href="perfil.html">
+          <img src="../images/iconos/icono-perfil.png" alt="">
+          <span>Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
     <footer class="site-footer">
       <div class="social-icons">
