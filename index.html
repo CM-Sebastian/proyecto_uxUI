@@ -1,85 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>U-Subscriptions</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Subscriptions - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
-    <main>
 
-        <section class="convenios">
-            <h2>Convenios</h2>
+    <header>
+        <div class="logo">
+        <img src="images/logo.png" alt="Logo de U-Subscriptions">
+        </div>
 
-                <div class="lista-convenios">
+        <nav aria-label="Navegación principal">
+        <ul>
+            <li>
+            <a href="pages/buscar-convenios.html">
+                <img src="images/iconos/icono-buscar.png" alt="Icono de convenios">
+                <span>Convenios</span>
+            </a>
+            </li>
 
-                    <article class="tarjeta-convenio">
-                        <div class="cabecera-tarjeta">
-                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
-                            <span class="estado">Activo</span>
-                            <button class="favorito">♡</button>
+            <li>
+            <a href="pages/panel_ahorro.html">
+                <img src="images/iconos/icono-ahorro.png" alt="Icono de ahorros">
+                <span>Ahorros</span>
+            </a>
+            </li>
+            <li>
+            <a href="pages/pagos.html">
+                <img src="images/iconos/icono-pagos.png" alt="Icono de pagos">
+                <span>Pagos</span>
+            </a>
+            </li>
+            <li>
+            <a href="pages/perfil.html">
+                <img src="images/iconos/icono-perfil.png" alt="Icono de perfil">
+                <span>Perfil</span>
+            </a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+
+    <main class="hero-container" id="heroContainer">
+        
+        <div class="animated-logo-wrapper" id="animatedLogo">
+            <img src="images/u-subs-logo 1.png" alt="U-Subscriptions Logo" class="moving-logo">
+        </div>
+
+        <section class="hero-left">
+            <div class="logo-placeholder-left"></div> 
+            <h1>U-Subscriptions</h1>
+            <p class="hero-description">
+                Descubre todos los descuentos que tu correo institucional puede brindarte
+            </p>
+            <p class="hero-highlight">
+                Conoce los convenios de tu universidad.
+            </p>
+        </section>
+
+        <section class="hero-right">
+            
+            <div class="initial-actions" id="initialActions">
+                <div class="logo-placeholder-right"></div> 
+                <div class="actions-pill-container">
+                    <button type="button"  id="btnShowLogin">Iniciar sesión</button>
+                    <button type="button" class="btn-solid-purple" id="btnShowRegister">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="form-card hidden" id="loginFormCard">
+                <div class="card-header">
+                    <h2>Inicia Sesión</h2>
+                    <button type="button" class="btn-close close-to-initial" title="Volver">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="subtitle">Ingresa tus datos para continuar</p>
+
+                <form action="#" method="POST" class="dynamic-form">
+                    <div class="form-group">
+                        <label for="login-email">Correo Institucional</label>
+                        <input type="email" id="login-email" placeholder="Ej. nombre@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <div class="input-password-wrapper">
+                            <input type="password" id="login-password" placeholder="••••••••" required>
+                            <i class="fa-regular fa-eye-slash toggle-password" data-target="login-password"></i>
                         </div>
-                        <p>Compañía</p>
-                        <p>Cuenta</p>
-                        <a href="#" class="boton-ver-mas">Ver más</a>
-                    </article>
+                    </div>
 
-                    <article class="tarjeta-convenio">
-                        <div class="cabecera-tarjeta">
-                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
-                            <span class="estado" style="background: #fff3e0; color: #f57c00;">Vence Pronto</span>
-                            <button class="favorito">♡</button>
+                    <div class="switch-prompt">
+                        ¿No tienes una cuenta aún? <a href="#" id="linkToRegister">Regístrate</a>
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" class="btn-submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-card hidden" id="registerFormCard">
+                <div class="card-header">
+                    <h2>Crea tu Cuenta</h2>
+                    <button type="button" class="btn-close close-to-initial" title="Volver">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="subtitle">Ingresa tus datos para comenzar</p>
+
+                <form action="#" method="POST" class="dynamic-form">
+                    
+                    <div class="form-group">
+                        <label for="fullname">Nombre y Apellido</label>
+                        <input type="text" id="fullname" placeholder="Ej. Maria Lopez">
+                    </div>
+
+                    <div class="form-group error" id="register-email-group">
+                        <label for="register-email">Correo Institucional</label>
+                        <input type="email" id="register-email" placeholder="Ej. nombre@ejemplo.com">
+                        <span class="error-text">
+                            <i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password">Contraseña</label>
+                        <div class="input-password-wrapper">
+                            <input type="password" id="reg-password" placeholder="••••••••">
+                            <i class="fa-regular fa-eye-slash toggle-password" data-target="reg-password"></i>
                         </div>
-                        <p>Compañía</p>
-                        <p>Cuenta</p>
-                        <a href="#" class="boton-ver-mas">Ver más</a>
-                    </article>
+                        <span class="field-hint">Mínimo 8 caracteres, incluya una mayúscula y un número</span>
+                    </div>
 
-            <!-- Tercera tarjeta añadida -->
-                    <article class="tarjeta-convenio">
-                        <div class="cabecera-tarjeta">
-                            <img src="images/Spotify-Logo.wine.webp" alt="Spotify">
-                            <span class="estado" style="background: #ffebee; color: #c62828;">Deshabilitado</span>
-                            <button class="favorito">♡</button>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar contraseña</label>
+                        <div class="input-password-wrapper">
+                            <input type="password" id="confirm-password" placeholder="••••••••">
+                            <i class="fa-regular fa-eye-slash toggle-password" data-target="confirm-password"></i>
                         </div>
-                        <p>Compañía</p>
-                        <p>Cuenta</p>
-                        <a href="#" class="boton-ver-mas">Ver más</a>
-                    </article>
+                    </div>
 
-                 </div>
+                    <div class="switch-prompt">
+                        ¿Ya tienes una cuenta? <a href="#" id="linkToLogin">Inicia Sesión</a>
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" class="btn-submit">Crear Cuenta</button>
+                    </div>
+
+                </form>
+            </div>
+
         </section>
 
     </main>
 
-    <footer class="site-footer">
-      <div class="social-icons">
-        <a href="#" aria-label="Instagram">
-          <img src="images/—Pngtree—instagram logo icon vector_3588821.png" alt="Instagram" width="24" height="24">
-        </a>
-        <a href="#" aria-label="Facebook">
-          <img src="images/facebook-circle-logo-png.webp" alt="Facebook" width="24" height="24">
-        </a>
-        <a href="#" aria-label="WhatsApp">
-          <img src="images/—Pngtree—whatsapp mobile app icon vector_8704828.png" alt="WhatsApp" width="24" height="24">
-        </a>
-      </div>
-      <p class="footer-text">Siguenos para nuevas promociones</p>
-    </footer>
+        <script>
+            const heroContainer = document.getElementById('heroContainer');
+            const initialActions = document.getElementById('initialActions');
+            const loginFormCard = document.getElementById('loginFormCard');
+            const registerFormCard = document.getElementById('registerFormCard');
 
-<script>
-    document.querySelectorAll('.favorito').forEach(boton => {
-        boton.addEventListener('click', function() {
-            if (this.innerText === '♡') {
-                this.innerText = '♥';
-                this.style.color = '#e91e63'; 
-            } else {
-                this.innerText = '♡';
-                this.style.color = 'black'; 
+            const btnShowLogin = document.getElementById('btnShowLogin');
+            const btnShowRegister = document.getElementById('btnShowRegister');
+            const linkToRegister = document.getElementById('linkToRegister');
+            const linkToLogin = document.getElementById('linkToLogin');
+            const closeButtons = document.querySelectorAll('.close-to-initial');
+
+            const registerForm = registerFormCard.querySelector('form');
+
+            function openForm(formToShow) {
+                heroContainer.classList.add('shift-left');
+                initialActions.classList.add('hidden');
+                
+                loginFormCard.classList.add('hidden');
+                registerFormCard.classList.add('hidden');
+                formToShow.classList.remove('hidden');
             }
-        });
-    });
-</script>
+
+            function resetToInitial() {
+                heroContainer.classList.remove('shift-left');
+                loginFormCard.classList.add('hidden');
+                registerFormCard.classList.add('hidden');
+                initialActions.classList.remove('hidden');
+            }
+
+            btnShowLogin.addEventListener('click', () => openForm(loginFormCard));
+            btnShowRegister.addEventListener('click', () => openForm(registerFormCard));
+            linkToRegister.addEventListener('click', (e) => { e.preventDefault(); openForm(registerFormCard); });
+            linkToLogin.addEventListener('click', (e) => { e.preventDefault(); openForm(loginFormCard); });
+
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', resetToInitial);
+            });
+
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault(); 
+                
+
+                registerForm.reset();
+
+                resetToInitial();
+            });
+
+            const regEmailInput = document.getElementById('register-email');
+            const regEmailGroup = document.getElementById('register-email-group');
+
+            regEmailInput.addEventListener('input', () => {
+                if (regEmailInput.value.trim() !== '') {
+                    regEmailGroup.classList.remove('error');
+                } else {
+                    regEmailGroup.classList.add('error');
+                }
+            });
+
+            const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+            togglePasswordIcons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    const targetId = icon.getAttribute('data-target');
+                    const passwordInput = document.getElementById(targetId);
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                });
+            });
+        </script>
+
 </body>
 </html>

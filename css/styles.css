@@ -1,0 +1,354 @@
+/*Registro*/
+.registro{
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 20px;
+
+}
+
+
+/* ==========================================
+   3. BANNER Y CARRUSEL DE MARCAS (General)
+   ========================================== */
+.banner-promocional {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.banner-promocional h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+
+#carouselMarcas {
+  max-width: 900px;
+  margin: 0 auto var(--space-lg);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.marcas-aliadas {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.marcas-aliadas img {
+  height: 40px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+  flex-shrink: 1;
+}
+
+#carouselMarcas .carousel-indicators {
+  position: static;
+  margin: var(--space-sm) 4rem;
+}
+
+#carouselMarcas .carousel-indicators [data-bs-target] {
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+#carouselMarcas .carousel-indicators .active {
+  background-color: var(--color-accent);
+  opacity: 1;
+}
+
+.boton-saber-mas {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #1d2433;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease;
+}
+
+.boton-saber-mas:hover {
+  background-color: var(--color-accent-light);
+}
+
+.boton-saber-mas:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   4. CONVENIOS & TARJETAS
+   ========================================== */
+.convenios {
+    max-width: 1100px;  
+    margin: 0 auto;     
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.lista-convenios {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.lista-convenios .tarjeta-convenio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-convenio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-convenio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cabecera-tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tarjeta-convenio .cabecera-tarjeta img {
+  height: 80px;
+  width: auto;
+  max-width: 120px;
+}
+
+.estado {
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e0f7fa;
+}
+
+.favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: transform 0.2s ease, color 0.2s ease;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.favorito:hover {
+  transform: scale(1.2);
+}
+
+.favorito:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.boton-ver-mas {
+  display: block;
+  margin-top: 15px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+  background: var(--color-primary-dark);
+}
+
+.boton-ver-mas:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.tarjeta-convenio p:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #111;
+
+/* Mejoras visuales para párrafos en secciones importantes */
+.main-container section p {
+  color: rgba(17,17,17,0.92);
+  line-height: 1.7;
+  font-size: 0.98rem;
+  margin-bottom: 0.6rem;
+}
+
+.banner-promocional p, .tarjeta-info p {
+  color: rgba(0,0,0,0.8);
+  font-size: 1.05rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+
+/* Hacer los párrafos de las tarjetas más llamativos */
+.tarjeta-convenio p:nth-of-type(1) {
+  color: #0f1721;
+}
+
+.tarjeta-convenio p:nth-of-type(2) {
+  color: rgba(17,17,17,0.7);
+}
+
+@media (max-width: 640px) {
+  .main-container section p {
+    font-size: 1rem;
+  }
+  .banner-promocional p, .tarjeta-info p {
+    font-size: 1rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+  margin-top: 10px;
+}
+
+.tarjeta-convenio p:nth-of-type(2) {
+    font-weight: 400;      
+    font-size: 0.9em;       
+    color: #666;            
+    margin-bottom: 15px;
+}
+
+
+/* Sección completa */
+.banner-promocional {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.banner-promocional h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+
+/* Panel del carrusel */
+#carouselMarcas {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-lg);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.marcas-aliadas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.marcas-aliadas img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Indicadores del carrusel (los puntitos) */
+#carouselMarcas .carousel-indicators [data-bs-target] {
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+#carouselMarcas .carousel-indicators .active {
+  background-color: var(--color-accent);
+  opacity: 1;
+}
+
+#carouselMarcas .carousel-indicators {
+  position: static;
+  margin: var(--spacing-sm) 3rem 0;
+}
+
+/* Botón Saber más */
+.boton-saber-mas {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #1d2433;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease;
+}
+  
+
+.boton-saber-mas:hover {
+  background-color: var(--color-accent-light);
+}
+
+.boton-saber-mas:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+@media (min-width: 992px) {
+  .banner-promocional {
+    padding: 3rem 2rem;
+  }
+
+  .banner-promocional h1 {
+    font-size: 2.75rem;
+  }
+
+  #carouselMarcas {
+    max-width: 1100px;
+    padding: 2rem 3rem;
+  }
+
+  .marcas-aliadas {
+    gap: 3rem;
+  }
+
+  .marcas-aliadas img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+  }
+}

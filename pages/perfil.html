@@ -3,180 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U-Subscriptions - Perfil</title>
-    <!-- FontAwesome y Estilos Globales / Locales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Perfil | U-Subscriptions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
-
-    <!-- CABECERA -->
-    <header class="main-header">
-        <div class="logo-container">
-            <a href="inicio.html">
-                <img src="../images/u-subs-logo 1.png" alt="U-Subscriptions Logo" class="nav-logo">
-            </a>
+    <!-- Encabezado / Barra de navegación -->
+    <header>
+        <div class="logo">
+            <img src="../images/u-subs-logo 1.png" alt="Logo de U-Subscriptions">
         </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li>
+                <a href="buscar-convenios.html">
+                    <img src="../images/iconos/icono-buscar.png" alt="Icono de convenios">
+                    <span>Convenios</span>
+                </a>
+                </li>
 
-        <nav class="icon-nav">
-            <a href="#" class="nav-item">
-                <div class="icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <span>Convenios</span>
-            </a>
-            <a href="#" class="nav-item">
-                <div class="icon-wrapper"><i class="fa-regular fa-bell"></i></div>
-                <span>Notificaciones</span>
-            </a>
-            <a href="#" class="nav-item">
-                <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
-                <span>Ahorro</span>
-            </a>
-            <a href="pagos.html" class="nav-item">
-                <div class="icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
-                <span>Pagos</span>
-            </a>
-            <a href="perfil.html" class="nav-item active">
-                <div class="icon-wrapper"><i class="fa-regular fa-user"></i></div>
-                <span>Perfil</span>
-            </a>
+                <li>
+                <a href="panel_ahorro.html">
+                    <img src="../images/iconos/icono-ahorro.png" alt="Icono de ahorros">
+                    <span>Ahorros</span>
+                </a>
+                </li>
+                <li>
+                <a href="pagos.html">
+                    <img src="../images/iconos/icono-pagos.png" alt="Icono de pagos">
+                    <span>Pagos</span>
+                </a>
+                </li>
+                <li>
+                <a href="perfil.html">
+                    <img src="../images/iconos/icono-perfil.png" alt="Icono de perfil">
+                    <span>Perfil</span>
+                </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <!-- BANNER DE TÍTULO -->
-    <div class="title-banner-wrapper">
-        <h1 class="page-title-banner">Perfil</h1>
-    </div>
+    <main class="perfil-page">
+        <h1>Perfil</h1>
 
-    <!-- GRID PRINCIPAL DE TRES COLUMNAS -->
-    <main class="perfil-grid-container">
-
-        <!-- COLUMNA 1: TU -->
-        <section class="perfil-column">
-            <div class="column-pill-title">Tu</div>
-
-            <!-- Fila 1 -->
-            <div class="account-card">
-                <div class="account-left">
-                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
-                    <div class="account-labels">
-                        <span class="label-title">Nombres</span>
-                        <span class="label-subtitle">Cuenta</span>
+        <section class="perfil-section">
+            <article class="perfil-card">
+                <h2>Tu</h2>
+                <div class="profile-card">
+                    <div class="profile-summary">
+                        <div class="profile-avatar">
+                            <img src="../images/Generic avatar.png" alt="Icono de usuario">
+                        </div>
+                        <div class="profile-info">
+                            <p>Nombres Cuenta</p>
+                        </div>
+                        <div class="profile-status">Matriculado</div>
+                    </div>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Editar</button>
                     </div>
                 </div>
-                <div class="account-right-box">
-                    <span class="status-title">Estado</span>
-                    <span class="status-subtitle">Matriculado</span>
-                    <button class="btn-purple-sm">Editar</button>
-                </div>
-            </div>
+            </article>
 
-            <!-- Fila 2 -->
-            <div class="account-card">
-                <div class="account-left">
-                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
-                    <div class="account-labels">
-                        <span class="label-title">Nombres</span>
-                        <span class="label-subtitle">Cuenta</span>
+            <article class="perfil-card">
+                <h2>Otras cuentas</h2>
+                <div class="profile-card">
+                    <div class="profile-summary">
+                        <div class="profile-avatar">
+                            <img src="../images/Generic avatar.png" alt="Icono de usuario">
+                        </div>
+                        <div class="profile-info">
+                            <p>Cuenta registrada</p>
+                        </div>
+                        <div class="profile-status">Matriculado</div>
+                    </div>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Editar</button>
                     </div>
                 </div>
-                <div class="account-right-box">
-                    <span class="status-title">Estado</span>
-                    <span class="status-subtitle">Matriculado</span>
-                    <button class="btn-purple-sm">Editar</button>
+            </article>
+
+            <article class="perfil-card">
+                <h2>Métodos de pago</h2>
+                <div class="profile-card">
+                    <div class="payment-grid">
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
+                            <p>Banco Pichincha</p>
+                        </div>
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
+                            <p>Banco Pichincha</p>
+                        </div>
+                        <div class="payment-item">
+                            <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha">
+                            <p>Banco Pichincha</p>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="button-primary" type="button">Configurar</button>
+                        <button class="button-secondary" type="button">Ver más</button>
+                    </div>
                 </div>
-            </div>
+            </article>
         </section>
-
-
-        <!-- COLUMNA 2: OTRAS CUENTAS -->
-        <section class="perfil-column">
-            <div class="column-pill-title">Otras cuentas</div>
-
-            <!-- Fila 1 -->
-            <div class="account-card">
-                <div class="account-left">
-                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
-                    <div class="account-labels">
-                        <span class="label-title">Cuenta</span>
-                        <span class="label-subtitle">registrada</span>
-                    </div>
-                </div>
-                <div class="account-right-box">
-                    <span class="status-title">Estado</span>
-                    <span class="status-subtitle">Matriculado</span>
-                    <button class="btn-purple-sm">Editar</button>
-                </div>
-            </div>
-
-            <!-- Fila 2 -->
-            <div class="account-card">
-                <div class="account-left">
-                    <div class="avatar-circle"><i class="fa-regular fa-user"></i></div>
-                    <div class="account-labels">
-                        <span class="label-title">Cuenta</span>
-                        <span class="label-subtitle">registrada</span>
-                    </div>
-                </div>
-                <div class="account-right-box">
-                    <span class="status-title">Estado</span>
-                    <span class="status-subtitle">Matriculado</span>
-                    <button class="btn-purple-sm">Editar</button>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- COLUMNA 3: MÉTODOS DE PAGO -->
-        <section class="perfil-column">
-            <div class="column-pill-title">Métodos de pago</div>
-
-            <!-- Fila 1 -->
-            <div class="payment-methods-card">
-                <div class="bank-icons-row">
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                </div>
-                <div class="payment-actions">
-                    <button class="btn-purple-md">Configurar</button>
-                    <button class="btn-outline-orange">Ver mas</button>
-                </div>
-            </div>
-
-            <!-- Fila 2 -->
-            <div class="payment-methods-card">
-                <div class="bank-icons-row">
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                    <div class="bank-item">
-                        <img src="../images/banco-pichincha-logo-0.webp" alt="Banco Pichincha" class="bank-img">
-                        <span class="bank-tag">Banco P...</span>
-                    </div>
-                </div>
-                <div class="payment-actions">
-                    <button class="btn-purple-md">Configurar</button>
-                    <button class="btn-outline-orange">Ver mas</button>
-                </div>
-            </div>
-        </section>
-
     </main>
-
 </body>
 </html>
