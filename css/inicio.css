@@ -81,6 +81,7 @@ body {
 
 .moving-logo {
     max-width: 170px;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -120,7 +121,6 @@ body {
     margin-top: 10px;
 }
 
-
 .hero-right {
     display: flex;
     justify-content: center;
@@ -159,7 +159,6 @@ body {
     transition: all 0.25s ease;
 }
 
-/*Seccion hecha por Anthony Uribe*/
 .btn-outline-purple:hover {
     background-color: var(--purple-main);
     color: white;
@@ -179,6 +178,7 @@ body {
 .btn-solid-purple:hover {
     background-color: var(--purple-dark);
 }
+
 
 .form-card {
     border: 2.5px solid var(--purple-border-card);
@@ -306,7 +306,6 @@ input:focus {
     background-color: #fce8e6;
 }
 
-/* BOTÓN DE ENVÍO */
 .form-action {
     display: flex;
     justify-content: center;
@@ -331,4 +330,81 @@ input:focus {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-left {
+        padding-top: 0;
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .animated-logo-wrapper {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .hero-container.shift-left .animated-logo-wrapper {
+        transform: scale(1.2); 
+    }
+
+    .logo-placeholder-left,
+    .logo-placeholder-right {
+        display: none; 
+    }
+
+    .hero-right {
+        min-height: auto;
+    }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .top-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-pill {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .brand-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .actions-pill-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-outline-purple,
+    .btn-solid-purple {
+        width: 100%;
+    }
+
+    .form-card {
+        padding: 20px;
+        border-radius: 25px;
+    }
 }
