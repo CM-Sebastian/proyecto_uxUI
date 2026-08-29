@@ -1,255 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U-Subscriptions - Inicio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U-Subscriptions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-        <a href="index.html">
+  <header>
+    <div class="logo">
+      <a href="index.html">
         <img src="images/logo.png" alt="Logo de U-Suscriptions">
-        </a>
+      </a>
     </div>
 
-        <nav aria-label="Navegación principal">
-        <ul>
-            <li>
-            <a href="pages/buscar-convenios.html">
-                <img src="images/iconos/icono-buscar.png" alt="Icono de convenios">
-                <span>Convenios</span>
-            </a>
-            </li>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li>
+          <a href="pages/buscar-convenios.html">
+            <img src="images/iconos/icono-buscar.png" alt="Icono de convenios">
+            <span>Convenios</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/panel_ahorro.html">
+            <img src="images/iconos/icono-ahorro.png" alt="Icono de ahorros">
+            <span>Ahorros</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/pagos.html">
+            <img src="images/iconos/icono-pagos.png" alt="Icono de pagos">
+            <span>Pagos</span>
+          </a>
+        </li>
+        <button id="menu-Notificaciones">
+            <img src="images/iconos/icono-notificaciones.png" alt="Icono de pagos">
+            <span>Notificaciones</span>
+        </button>
+        <li>
+          <a href="pages/perfil.html">
+            <img src="images/iconos/icono-perfil.png" alt="Icono de perfil">
+            <span>Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-            <li>
-            <a href="pages/panel_ahorro.html">
-                <img src="images/iconos/icono-ahorro.png" alt="Icono de ahorros">
-                <span>Ahorros</span>
-            </a>
-            </li>
-            <li>
-            <a href="pages/pagos.html">
-                <img src="images/iconos/icono-pagos.png" alt="Icono de pagos">
-                <span>Pagos</span>
-            </a>
-            </li>
+  <main>
+    <section class="banner-promocional">
+      <h1>U-subscriptions</h1>
+      <p>Estos y mil productos más los encontrarás con un descuento aquí en U-Subscriptions</p>
 
-            <button id="menu-Notificaciones">
-                <img src="images/iconos/icono-notificaciones.png" alt="Icono de pagos">
-                <span>Notificaciones</span>
-            </button>
-            <li>
-            <a href="pages/perfil.html">
-                <img src="images/iconos/icono-perfil.png" alt="Icono de perfil">
-                <span>Perfil</span>
-            </a>
-            </li>
-        </ul>
-        </nav>
-    </header>
-
-
-    <main class="hero-container" id="heroContainer">
-        
-        <div class="animated-logo-wrapper" id="animatedLogo">
-            <img src="images/u-subs-logo 1.png" alt="U-Subscriptions Logo" class="moving-logo">
+      <div id="carouselMarcas" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="marcas-aliadas">
+              <img src="images/marcas/marca-adove.png" alt="Adobe Creative">
+              <img src="images/marcas/marca-adidas.png" alt="Adidas">
+              <img src="images/marcas/marca-spotify.png" alt="Spotify">
+              <img src="images/marcas/marca-apple.png" alt="Apple Music">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="marcas-aliadas">
+              <img src="images/marcas/marca-mcdonalds.png" alt="McDonald's">
+              <img src="images/marcas/marca-notion.png" alt="Notion">
+              <img src="images/marcas/marca-canva.png" alt="Canva">
+              <img src="images/marcas/marca-lenovo.png" alt="Lenovo">
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="mt-4">
+        <a href="pages/buscar-convenios.html" class="boton-saber-mas">Saber más</a>
+      </div>
+    </section>
 
-        <section class="hero-left">
-            <div class="logo-placeholder-left"></div> 
-            <h1>U-Suscriptions</h1>
-            <p class="hero-description">
-                Descubre todos los descuentos que tu correo institucional puede brindarte
-            </p>
-            <p class="hero-highlight">
-                Conoce los convenios de tu universidad.
-            </p>
-        </section>
+    <section class="registro">
+      <p>Conoce los convenios de tu universidad.</p>
+      <div class="registro-contenido">
+        <a href="index.html">
+          <button type="button" class="button-primary">Iniciar Sesion</button>
+        </a>
+        <a href="index.html">
+          <button type="button" class="button-secondary">Registrarse</button>
+        </a>
+      </div>
+    </section>
 
-        <section class="hero-right">
-            
-            <div class="initial-actions" id="initialActions">
-                <div class="logo-placeholder-right"></div> 
-                <div class="actions-pill-container">
-                    <button type="button" id="btnShowLogin">Iniciar sesión</button>
-                    <button type="button" class="btn-solid-purple" id="btnShowRegister">Registrarse</button>
-                </div>
-            </div>
+    <section class="convenios">
+      <h2>Convenios</h2>
+      
+      <div class="grilla-convenios">
+        <!-- Tarjeta 1: Spotify -->
+        <article class="tarjeta-convenio">
+          <div class="tarjeta-header">
+            <img src="images/marcas/marca-spotify.png" alt="Spotify">
+            <span class="badge-estado">Activo</span>
+            <button class="btn-favorito activo" aria-label="Marcar favorito">
+              <svg class="icono-corazon" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </button>
+          </div>
+          <p class="tarjeta-compania">Spotify</p>
+          <p class="tarjeta-cuenta">Cuenta Premium</p>
+          <div class="detalle-descuento" hidden>
+            <p class="texto-oferta">Obtén <strong>50% de descuento</strong> en tu plan universitario individual mostrando tu carné institucional.</p>
+          </div>
+          <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
+        </article>
 
-            <div class="form-card hidden" id="loginFormCard">
-                <div class="card-header">
-                    <h2>Inicia Sesión</h2>
-                    <button type="button" class="btn-close close-to-initial" aria-label="Volver al inicio">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <p class="subtitle">Ingresa tus datos para continuar</p>
+        <!-- Tarjeta 2: Gemini -->
+        <article class="tarjeta-convenio">
+          <div class="tarjeta-header">
+            <img src="images/marcas/marca-gemini.png" alt="Gemini">
+            <span class="badge-estado">Vence pronto</span>
+            <button class="btn-favorito activo" aria-label="Marcar favorito">
+              <svg class="icono-corazon" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </button>
+          </div>
+          <p class="tarjeta-compania">Gemini</p>
+          <p class="tarjeta-cuenta">Cuenta Plus</p>
+          <div class="detalle-descuento" hidden>
+            <p class="texto-oferta">Obtén <strong>50% de descuento</strong> en tu plan universitario individual mostrando tu carné institucional.</p>
+          </div>
+          <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
+        </article>
 
-                <form action="#" method="POST" class="dynamic-form">
-                    <div class="form-group">
-                        <label for="login-email">Correo Institucional</label>
-                        <input type="email" id="login-email" placeholder="Ej. nombre@ejemplo.com" required>
-                    </div>
+        <!-- Tarjeta 3: Canva -->
+        <article class="tarjeta-convenio">
+          <div class="tarjeta-header">
+            <img src="images/marcas/marca-canva.png" alt="Canva">
+            <span class="badge-estado">Venta pausada</span>
+            <button class="btn-favorito" aria-label="Marcar favorito">
+              <svg class="icono-corazon" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </button>
+          </div>
+          <p class="tarjeta-compania">Canva</p>
+          <p class="tarjeta-cuenta">Cuenta Pro</p>
+          <div class="detalle-descuento" hidden>
+            <p class="texto-oferta">Obtén <strong>50% de descuento</strong> en tu plan universitario individual mostrando tu carné institucional.</p>
+          </div>
+          <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
+        </article>
+      </div>
 
-                    <div class="form-group">
-                        <label for="login-password">Contraseña</label>
-                        <div class="input-password-wrapper">
-                            <input type="password" id="login-password" placeholder="••••••••" required>
-                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="login-password" aria-label="Mostrar contraseña"></button>
-                        </div>
-                    </div>
+    </section>
+  </main>
 
-                    <div class="switch-prompt">
-                        ¿No tienes una cuenta aún? <a href="#" id="linkToRegister">Regístrate</a>
-                    </div>
+  <!-- NAVEGACIÓN INFERIOR PARA MÓVIL EN INDEX -->
+  <nav class="nav-mobile-bottom" aria-label="Navegación Móvil">
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Inicio">
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="buscar-convenios.html">
+          <img src="images/iconos/icono-buscar.png" alt="Convenios">
+          <span>Convenios</span>
+        </a>
+      </li>
+      <li>
+        <a href="panel_ahorro.html">
+          <img src="images/iconos/icono-ahorro.png" alt="Ahorros">
+          <span>Ahorros</span>
+        </a>
+      </li>
+      <li>
+        <a href="pagos.html">
+          <img src="images/iconos/icono-pagos.png" alt="Pagos">
+          <span>Pagos</span>
+        </a>
+      </li>
+      <li>
+        <a href="perfil.html">
+          <img src="images/iconos/icono-perfil.png" alt="Perfil">
+          <span>Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-                    <div class="form-action">
-                        <button type="submit" class="btn-submit">Entrar</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="form-card hidden" id="registerFormCard">
-                <div class="card-header">
-                    <h2>Crea tu Cuenta</h2>
-                    <button type="button" class="btn-close close-to-initial" aria-label="Volver al inicio">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <p class="subtitle">Ingresa tus datos para comenzar</p>
-
-                <form action="#" method="POST" class="dynamic-form">
-                    
-                    <div class="form-group">
-                        <label for="fullname">Nombre y Apellido</label>
-                        <input type="text" id="fullname" placeholder="Ej. Maria Lopez">
-                    </div>
-
-                    <div class="form-group error" id="register-email-group">
-                        <label for="register-email">Correo Institucional</label>
-                        <input type="email" id="register-email" placeholder="Ej. nombre@ejemplo.com">
-                        <span class="error-text">
-                            <i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio
-                        </span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-password">Contraseña</label>
-                        <div class="input-password-wrapper">
-                            <input type="password" id="reg-password" placeholder="••••••••">
-                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="reg-password" aria-label="Mostrar contraseña"></button>
-                        </div>
-                        <span class="field-hint">Mínimo 8 caracteres, incluya una mayúscula y un número</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirm-password">Confirmar contraseña</label>
-                        <div class="input-password-wrapper">
-                            <input type="password" id="confirm-password" placeholder="••••••••">
-                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="confirm-password" aria-label="Mostrar contraseña"></button>
-                        </div>
-                    </div>
-
-                    <div class="switch-prompt">
-                        ¿Ya tienes una cuenta? <a href="#" id="linkToLogin">Inicia Sesión</a>
-                    </div>
-
-                    <div class="form-action">
-                        <button type="submit" class="btn-submit">Crear Cuenta</button>
-                    </div>
-
-                </form>
-            </div>
-
-        </section>
-
-    </main>
-    
-    <script src="js/notificaciones.js"></script>
-    <script>
-        const heroContainer = document.getElementById('heroContainer');
-        const initialActions = document.getElementById('initialActions');
-        const loginFormCard = document.getElementById('loginFormCard');
-        const registerFormCard = document.getElementById('registerFormCard');
-
-        const btnShowLogin = document.getElementById('btnShowLogin');
-        const btnShowRegister = document.getElementById('btnShowRegister');
-        const linkToRegister = document.getElementById('linkToRegister');
-        const linkToLogin = document.getElementById('linkToLogin');
-        const closeButtons = document.querySelectorAll('.close-to-initial');
-
-        const registerForm = registerFormCard.querySelector('form');
-
-        function openForm(formToShow) {
-            heroContainer.classList.add('shift-left');
-            initialActions.classList.add('hidden');
-            
-            loginFormCard.classList.add('hidden');
-            registerFormCard.classList.add('hidden');
-            formToShow.classList.remove('hidden');
-        }
-
-        function resetToInitial() {
-            heroContainer.classList.remove('shift-left');
-            loginFormCard.classList.add('hidden');
-            registerFormCard.classList.add('hidden');
-            initialActions.classList.remove('hidden');
-        }
-
-        btnShowLogin.addEventListener('click', () => openForm(loginFormCard));
-        btnShowRegister.addEventListener('click', () => openForm(registerFormCard));
-        linkToRegister.addEventListener('click', (e) => { e.preventDefault(); openForm(registerFormCard); });
-        linkToLogin.addEventListener('click', (e) => { e.preventDefault(); openForm(loginFormCard); });
-
-        closeButtons.forEach(btn => {
-            btn.addEventListener('click', resetToInitial);
-        });
-
-        registerForm.addEventListener('submit', (e) => {
-            e.preventDefault(); 
-            registerForm.reset();
-            resetToInitial();
-        });
-
-        const regEmailInput = document.getElementById('register-email');
-        const regEmailGroup = document.getElementById('register-email-group');
-
-        regEmailInput.addEventListener('input', () => {
-            if (regEmailInput.value.trim() !== '') {
-                regEmailGroup.classList.remove('error');
-            } else {
-                regEmailGroup.classList.add('error');
-            }
-        });
-
-        const togglePasswordButtons = document.querySelectorAll('.toggle-password');
-        togglePasswordButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target');
-                const passwordInput = document.getElementById(targetId);
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                
-                if (type === 'text') {
-                    button.classList.remove('fa-eye-slash');
-                    button.classList.add('fa-eye');
-                    button.setAttribute('aria-label', 'Ocultar contraseña');
-                } else {
-                    button.classList.remove('fa-eye');
-                    button.classList.add('fa-eye-slash');
-                    button.setAttribute('aria-label', 'Mostrar contraseña');
-                }
-            });
-        });
-    </script>
-
+  <footer class="site-footer">
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram">
+        <img src="images/—Pngtree—instagram logo icon vector_3588821.png" alt="Instagram" width="24" height="24">
+      </a>
+      <a href="#" aria-label="Facebook">
+        <img src="images/facebook-circle-logo-png.webp" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="#" aria-label="WhatsApp">
+        <img src="images/—Pngtree—whatsapp mobile app icon vector_8704828.png" alt="WhatsApp" width="24" height="24">
+      </a>
+    </div>
+    <p class="footer-text">Síguenos para nuevas promociones</p>
+  </footer>
+  <script src="js/notificaciones.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/inicio.js" defer></script>
 </body>
 </html>
