@@ -1,8 +1,8 @@
-//BUSCAR CONVENIOS — Lógica de la pantalla//
+//BUSCAR CONVENIOS — Lógica de la pantalla
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Elementos base  //
+  // 1. Elementos base 
   const tarjetas = document.querySelectorAll('.tarjeta-convenio');
   const todosLosChips = document.querySelectorAll('.chip-filtro');
   const selectCompania = document.getElementById('filtro-compania');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let filtroActivo = 'todos';
 
-  //  2. Filtros (chips + selects + buscador)  //
+  //  2. Filtros (chips + selects + buscador)  
   function aplicarFiltros() {
     const companiaSeleccionada = selectCompania ? selectCompania.value.toLowerCase() : '';
     const cuentaSeleccionada = selectCuenta ? selectCuenta.value.toLowerCase() : '';
@@ -107,16 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //  3. Favoritos (corazón)  //
+  //  3. Favoritos (corazón)  
   document.querySelectorAll('.btn-favorito').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       btn.classList.toggle('activo');
+      
+      // Actualizamos el atributo aria-pressed dinámicamente
+      const esActivo = btn.classList.contains('activo');
+      btn.setAttribute('aria-pressed', esActivo ? 'true' : 'false');
+      
       aplicarFiltros();
     });
   });
 
-  //  4. Paneles de descuento expandibles  //
+  //  4. Paneles de descuento expandibles  
   function cerrarDetalle(tarjeta) {
     const btn = tarjeta.querySelector('.btn-ver-mas');
     const detalle = tarjeta.querySelector('.detalle-descuento');

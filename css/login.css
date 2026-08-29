@@ -256,17 +256,39 @@ input:focus {
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .input-password-wrapper input {
-    padding-right: 38px;
+    padding-right: 40px;
 }
 
-.toggle-password {
+/* Botón transparente perfectamente centrado para el ícono */
+.btn-toggle-password {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 12px;
-    color: #444;
-    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.btn-toggle-password:hover {
+    color: var(--purple-main);
+}
+
+/* Tamaño y comportamiento del ícono dentro del botón */
+.toggle-password {
+    font-size: 0.95rem;
 }
 
 .field-hint {

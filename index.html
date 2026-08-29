@@ -79,7 +79,7 @@
             <div class="initial-actions" id="initialActions">
                 <div class="logo-placeholder-right"></div> 
                 <div class="actions-pill-container">
-                    <button type="button"  id="btnShowLogin">Iniciar sesión</button>
+                    <button type="button" id="btnShowLogin">Iniciar sesión</button>
                     <button type="button" class="btn-solid-purple" id="btnShowRegister">Registrarse</button>
                 </div>
             </div>
@@ -87,7 +87,7 @@
             <div class="form-card hidden" id="loginFormCard">
                 <div class="card-header">
                     <h2>Inicia Sesión</h2>
-                    <button type="button" class="btn-close close-to-initial" title="Volver">
+                    <button type="button" class="btn-close close-to-initial" aria-label="Volver al inicio">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
@@ -103,7 +103,7 @@
                         <label for="login-password">Contraseña</label>
                         <div class="input-password-wrapper">
                             <input type="password" id="login-password" placeholder="••••••••" required>
-                            <i class="fa-regular fa-eye-slash toggle-password" data-target="login-password"></i>
+                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="login-password" aria-label="Mostrar contraseña"></button>
                         </div>
                     </div>
 
@@ -120,7 +120,7 @@
             <div class="form-card hidden" id="registerFormCard">
                 <div class="card-header">
                     <h2>Crea tu Cuenta</h2>
-                    <button type="button" class="btn-close close-to-initial" title="Volver">
+                    <button type="button" class="btn-close close-to-initial" aria-label="Volver al inicio">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
@@ -145,7 +145,7 @@
                         <label for="reg-password">Contraseña</label>
                         <div class="input-password-wrapper">
                             <input type="password" id="reg-password" placeholder="••••••••">
-                            <i class="fa-regular fa-eye-slash toggle-password" data-target="reg-password"></i>
+                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="reg-password" aria-label="Mostrar contraseña"></button>
                         </div>
                         <span class="field-hint">Mínimo 8 caracteres, incluya una mayúscula y un número</span>
                     </div>
@@ -154,7 +154,7 @@
                         <label for="confirm-password">Confirmar contraseña</label>
                         <div class="input-password-wrapper">
                             <input type="password" id="confirm-password" placeholder="••••••••">
-                            <i class="fa-regular fa-eye-slash toggle-password" data-target="confirm-password"></i>
+                            <button type="button" class="toggle-password fa-regular fa-eye-slash" data-target="confirm-password" aria-label="Mostrar contraseña"></button>
                         </div>
                     </div>
 
@@ -172,78 +172,83 @@
         </section>
 
     </main>
-        <script src="js/notificaciones.js"></script>
-        <script>
-            const heroContainer = document.getElementById('heroContainer');
-            const initialActions = document.getElementById('initialActions');
-            const loginFormCard = document.getElementById('loginFormCard');
-            const registerFormCard = document.getElementById('registerFormCard');
 
-            const btnShowLogin = document.getElementById('btnShowLogin');
-            const btnShowRegister = document.getElementById('btnShowRegister');
-            const linkToRegister = document.getElementById('linkToRegister');
-            const linkToLogin = document.getElementById('linkToLogin');
-            const closeButtons = document.querySelectorAll('.close-to-initial');
+    <script>
+        const heroContainer = document.getElementById('heroContainer');
+        const initialActions = document.getElementById('initialActions');
+        const loginFormCard = document.getElementById('loginFormCard');
+        const registerFormCard = document.getElementById('registerFormCard');
 
-            const registerForm = registerFormCard.querySelector('form');
+        const btnShowLogin = document.getElementById('btnShowLogin');
+        const btnShowRegister = document.getElementById('btnShowRegister');
+        const linkToRegister = document.getElementById('linkToRegister');
+        const linkToLogin = document.getElementById('linkToLogin');
+        const closeButtons = document.querySelectorAll('.close-to-initial');
 
-            function openForm(formToShow) {
-                heroContainer.classList.add('shift-left');
-                initialActions.classList.add('hidden');
-                
-                loginFormCard.classList.add('hidden');
-                registerFormCard.classList.add('hidden');
-                formToShow.classList.remove('hidden');
+        const registerForm = registerFormCard.querySelector('form');
+
+        function openForm(formToShow) {
+            heroContainer.classList.add('shift-left');
+            initialActions.classList.add('hidden');
+            
+            loginFormCard.classList.add('hidden');
+            registerFormCard.classList.add('hidden');
+            formToShow.classList.remove('hidden');
+        }
+
+        function resetToInitial() {
+            heroContainer.classList.remove('shift-left');
+            loginFormCard.classList.add('hidden');
+            registerFormCard.classList.add('hidden');
+            initialActions.classList.remove('hidden');
+        }
+
+        btnShowLogin.addEventListener('click', () => openForm(loginFormCard));
+        btnShowRegister.addEventListener('click', () => openForm(registerFormCard));
+        linkToRegister.addEventListener('click', (e) => { e.preventDefault(); openForm(registerFormCard); });
+        linkToLogin.addEventListener('click', (e) => { e.preventDefault(); openForm(loginFormCard); });
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', resetToInitial);
+        });
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            registerForm.reset();
+            resetToInitial();
+        });
+
+        const regEmailInput = document.getElementById('register-email');
+        const regEmailGroup = document.getElementById('register-email-group');
+
+        regEmailInput.addEventListener('input', () => {
+            if (regEmailInput.value.trim() !== '') {
+                regEmailGroup.classList.remove('error');
+            } else {
+                regEmailGroup.classList.add('error');
             }
+        });
 
-            function resetToInitial() {
-                heroContainer.classList.remove('shift-left');
-                loginFormCard.classList.add('hidden');
-                registerFormCard.classList.add('hidden');
-                initialActions.classList.remove('hidden');
-            }
-
-            btnShowLogin.addEventListener('click', () => openForm(loginFormCard));
-            btnShowRegister.addEventListener('click', () => openForm(registerFormCard));
-            linkToRegister.addEventListener('click', (e) => { e.preventDefault(); openForm(registerFormCard); });
-            linkToLogin.addEventListener('click', (e) => { e.preventDefault(); openForm(loginFormCard); });
-
-            closeButtons.forEach(btn => {
-                btn.addEventListener('click', resetToInitial);
-            });
-
-            registerForm.addEventListener('submit', (e) => {
-                e.preventDefault(); 
+        const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+        togglePasswordButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const passwordInput = document.getElementById(targetId);
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
                 
-
-                registerForm.reset();
-
-                resetToInitial();
-            });
-
-            const regEmailInput = document.getElementById('register-email');
-            const regEmailGroup = document.getElementById('register-email-group');
-
-            regEmailInput.addEventListener('input', () => {
-                if (regEmailInput.value.trim() !== '') {
-                    regEmailGroup.classList.remove('error');
+                if (type === 'text') {
+                    button.classList.remove('fa-eye-slash');
+                    button.classList.add('fa-eye');
+                    button.setAttribute('aria-label', 'Ocultar contraseña');
                 } else {
-                    regEmailGroup.classList.add('error');
+                    button.classList.remove('fa-eye');
+                    button.classList.add('fa-eye-slash');
+                    button.setAttribute('aria-label', 'Mostrar contraseña');
                 }
             });
-
-            const togglePasswordIcons = document.querySelectorAll('.toggle-password');
-            togglePasswordIcons.forEach(icon => {
-                icon.addEventListener('click', () => {
-                    const targetId = icon.getAttribute('data-target');
-                    const passwordInput = document.getElementById(targetId);
-                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                    passwordInput.setAttribute('type', type);
-                    icon.classList.toggle('fa-eye');
-                    icon.classList.toggle('fa-eye-slash');
-                });
-            });
-        </script>
+        });
+    </script>
 
 </body>
 </html>

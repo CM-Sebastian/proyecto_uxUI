@@ -12,36 +12,32 @@
   <link rel="stylesheet" href="../css/extras-tipo-beneficio.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
-  
-
-
   <title>Buscar Convenios | U-Subscriptions</title>
 </head>
 <body>
     <header class="header-principal">
         <div class="header-top">
-        <div class=" logo-desktop">
+        <div class="logo-desktop">
             <a href="inicio.html">
             <img src="../images/logo.png" alt="Logo de U-Subscriptions">
             </a>
         </div>
-        <!-- Barra de busqueda principal -->
-    <div class="buscador-header">
-      <img src="../images/iconos/icono-buscar.png" alt="" class="icono-buscar">
-      <input type="search" id="inputBuscador" placeholder="Buscar convenios, marcas o servicios..." aria-label="Buscar convenios">
-      <button type="button" class="btn-limpiar" id="btnLimpiarBusqueda" aria-label="Limpiar búsqueda"></button>
-    </div>
+        <!-- Barra de busqueda principal corregida (A2: Etiqueta visible) -->
+        <div class="buscador-header">
+          <label for="inputBuscador" class="label-buscador">Buscar:</label>
+          <img src="../images/iconos/icono-buscar.png" alt="" class="icono-buscar">
+          <input type="search" id="inputBuscador" placeholder="Buscar convenios, marcas o servicios..." aria-label="Buscar convenios">
+          <button type="button" class="btn-limpiar" id="btnLimpiarBusqueda" aria-label="Limpiar búsqueda"></button>
+        </div>
 
            <nav class="nav-desktop" aria-label="Navegación principal">
             <ul>
-                
                 <li>
                 <a href="buscar-convenios.html" class="active">
                     <img src="../images/iconos/icono-buscar.png" alt="Icono de convenios">
                     <span>Convenios</span>
                 </a>
                 </li>
-
                 <li>
                 <a href="panel_ahorro.html">
                     <img src="../images/iconos/icono-ahorro.png" alt="Icono de ahorros">
@@ -63,306 +59,297 @@
             </ul>
             </nav>
         </div>
+        
         <!-- Barra de Filtros tipo Chips/Píldoras deslizables  -->
         <div class="contenedor-chips-filtros">
-    <div class="chips-scroll">
-      <button type="button" class="chip-filtro active" data-filtro="todos">Todos</button>
-      <button type="button" class="chip-filtro" id="btn-filtro-favoritos" data-filtro="favoritos">
-             Favoritos
-        </button>
-      <!-- Dropdown Filtro Compania -->
-      <div class="dropdown-filtro">
-        <select id="filtro-compania" aria-label="Filtrar por Compañía">
-          <option value="">Compañía: Todas</option>
-          <option value="spotify">Spotify</option>
-          <option value="canva">Canva</option>
-          <option value="notion">Notion</option>
-          <option value="adidas">Adidas</option>
-        </select>
-      </div>
+            <div class="chips-scroll">
+              <button type="button" class="chip-filtro active" data-filtro="todos">Todos</button>
+              <button type="button" class="chip-filtro" id="btn-filtro-favoritos" data-filtro="favoritos">
+                     Favoritos
+                </button>
+                
+              <!-- Dropdown Filtro Compania (A2: Etiqueta visible) -->
+              <div class="dropdown-filtro">
+                <label for="filtro-compania" class="label-filtro">Compañía:</label>
+                <select id="filtro-compania">
+                  <option value="">Todas</option>
+                  <option value="spotify">Spotify</option>
+                  <option value="canva">Canva</option>
+                  <option value="notion">Notion</option>
+                  <option value="adidas">Adidas</option>
+                </select>
+              </div>
 
-      <!-- Dropdown Filtro Cuenta -->
-      <div class="dropdown-filtro">
-        <select id="filtro-cuenta" aria-label="Filtrar por Tipo de Cuenta">
-          <option value="">Cuenta: Todas</option>
-          <option value="estudiante">Estudiante</option>
-          <option value="familiar">Familiar</option>
-          <option value="individual">Individual</option>
-        </select>
-      </div>
+              <!-- Dropdown Filtro Cuenta (A2: Etiqueta visible) -->
+              <div class="dropdown-filtro">
+                <label for="filtro-cuenta" class="label-filtro">Cuenta:</label>
+                <select id="filtro-cuenta">
+                  <option value="">Todas</option>
+                  <option value="estudiante">Estudiante</option>
+                  <option value="familiar">Familiar</option>
+                  <option value="individual">Individual</option>
+                </select>
+              </div>
 
-      <button type="button" class="chip-filtro" data-filtro="vence">Vence pronto</button>
-      
-    </div>
-  </div>
-</header>
+              <button type="button" class="chip-filtro" data-filtro="vence">Vence pronto</button>
+            </div>
+        </div>
+    </header>
     
-
 <main class="convenios-page">
     <section class="convenios">
-
         <h1>Convenios</h1>
     
-    <!-- Carrusel de servicios -->
-<div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="servicio-card">
-                <div class="servicio-icono">
-    <img src="../images/marcas/marca-spotify.png" alt="Spotify">
-</div>
-                <div class="servicio-info">
-                    <p class="servicio-nombre">Spotify</p>
-                    
+        <!-- Carrusel de servicios -->
+        <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="servicio-card">
+                        <div class="servicio-icono">
+                            <img src="../images/marcas/marca-spotify.png" alt="Spotify">
+                        </div>
+                        <div class="servicio-info">
+                            <p class="servicio-nombre">Spotify</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="servicio-card">
+                        <div class="servicio-icono">
+                            <img src="../images/marcas/marca-canva.png" alt="Canva">
+                        </div>
+                        <div class="servicio-info">
+                            <p class="servicio-nombre">Canva</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="servicio-card">
+                        <div class="servicio-icono">
+                            <img src="../images/marcas/marca-notion.png" alt="Notion">
+                        </div>
+                        <div class="servicio-info">
+                            <p class="servicio-nombre">Notion</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-        </div>
-        <div class="carousel-item">
-            <div class="servicio-card">
-                <div class="servicio-icono">
-    <img src="../images/marcas/marca-canva.png" alt="Canva">
-</div>
-                <div class="servicio-info">
-                    <p class="servicio-nombre">Canva</p>
-                    
-                </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="servicio-card">
-                <div class="servicio-icono">
-    <img src="../images/marcas/marca-notion.png" alt="Notion">
-</div>
-                <div class="servicio-info">
-                    <p class="servicio-nombre">Notion</p>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-</div>
-           
-      
 
-
-    <!-- Grilla de tarjetas de convenios -->
-    <div class="grilla-convenios">
-
-        <!-- Spotify Individual — cupon -->
-        <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-spotify.png" alt="Spotify">
-                <span class="badge-estado">Vence pronto</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-                    <svg class="icono-corazon" viewBox="0 0 24 24">
+        <!-- Grilla de tarjetas de convenios -->
+        <div class="grilla-convenios">
+            <!-- Spotify Individual — cupon -->
+            <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-spotify.png" alt="Spotify">
+                    <span class="badge-estado">Vence pronto</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
-                </button>
-            </div>
-            <p class="tarjeta-compania">Spotify</p>
-            <p class="tarjeta-cuenta">Cuenta Individual</p>
-            <p class="tarjeta-beneficio">20% off en el plan Individual</p>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Spotify</p>
+                <p class="tarjeta-cuenta">Cuenta Individual</p>
+                <p class="tarjeta-beneficio">20% off en el plan Individual</p>
                 <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p><strong>Código:</strong> SPOT20</p>
-                <p>20% de descuento en el plan Individual, válido hasta el 31/12/2026.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
+                    <p><strong>Código:</strong> SPOT20</p>
+                    <p>20% de descuento en el plan Individual, válido hasta el 31/12/2026.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Spotify Duo — cupon, cuenta familiar -->
-        <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="familiar" data-estado="activo" data-tipo-beneficio="cupon">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-spotify.png" alt="Spotify">
-                <span class="badge-estado">Disponible</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Spotify</p>
-            <p class="tarjeta-cuenta">Cuenta Familiar (Duo)</p>
-            <p class="tarjeta-beneficio">15% off en el plan Duo (2 cuentas Premium)</p>
+            <!-- Spotify Duo — cupon, cuenta familiar -->
+            <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="familiar" data-estado="activo" data-tipo-beneficio="cupon">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-spotify.png" alt="Spotify">
+                    <span class="badge-estado">Disponible</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Spotify</p>
+                <p class="tarjeta-cuenta">Cuenta Familiar (Duo)</p>
+                <p class="tarjeta-beneficio">15% off en el plan Duo (2 cuentas Premium)</p>
                 <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p><strong>Código:</strong> SPOTDUO15</p>
-                <p>15% de descuento en el plan Duo, válido hasta el 15/11/2026.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
+                    <p><strong>Código:</strong> SPOTDUO15</p>
+                    <p>15% de descuento en el plan Duo, válido hasta el 15/11/2026.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Spotify Estudiante — verificacion (50% off) -->
-        <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-spotify.png" alt="Spotify">
-                <span class="badge-estado">-50% estudiantes</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Spotify</p>
-            <p class="tarjeta-cuenta">Cuenta Estudiante</p>
-            <p class="tarjeta-beneficio">50% off en Premium Individual, solo por ser estudiante</p>
-                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver beneficio</button>
-                <div class="detalle-descuento" hidden>
-                <p>Spotify te da <strong>50% de descuento</strong> en el plan Individual al verificar tu condición de estudiante (documento + correo institucional).</p>
-                <p class="nota-sin-codigo">No necesitas un código: el descuento se aplica después de verificarte.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+            <!-- Spotify Estudiante — verificacion -->
+            <article class="tarjeta-convenio" data-compania="spotify" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-spotify.png" alt="Spotify">
+                    <span class="badge-estado">-50% estudiantes</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
                 </div>
-        </article>
-
-        <!-- Canva Pro — cupon, individual -->
-        <article class="tarjeta-convenio" data-compania="canva" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-canva.png" alt="Canva">
-                <span class="badge-estado">Vence pronto</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Canva</p>
-            <p class="tarjeta-cuenta">Cuenta Individual</p>
-            <p class="tarjeta-beneficio">30% off en Canva Pro anual</p>
+                <p class="tarjeta-compania">Spotify</p>
+                <p class="tarjeta-cuenta">Cuenta Estudiante</p>
+                <p class="tarjeta-beneficio">50% off en Premium Individual, solo por ser estudiante</p>
                 <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p><strong>Código:</strong> CANVA30</p>
-                <p>30% de descuento en Canva Pro anual, válido hasta el 30/11/2026.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
+                    <p>Spotify te da <strong>50% de descuento</strong> en el plan Individual al verificar tu condición de estudiante (documento + correo institucional).</p>
+                    <p class="nota-sin-codigo">No necesitas un código: el descuento se aplica después de verificarte.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Canva for Teams — cupon, familiar -->
-        <article class="tarjeta-convenio" data-compania="canva" data-cuenta="familiar" data-estado="activo" data-tipo-beneficio="cupon">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-canva.png" alt="Canva">
-                <span class="badge-estado">Disponible</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Canva</p>
-            <p class="tarjeta-cuenta">Cuenta Familiar (hasta 5 integrantes)</p>
-            <p class="tarjeta-beneficio">25% off en Canva for Teams</p>
+            <!-- Canva Pro — cupon, individual -->
+            <article class="tarjeta-convenio" data-compania="canva" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-canva.png" alt="Canva">
+                    <span class="badge-estado">Vence pronto</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Canva</p>
+                <p class="tarjeta-cuenta">Cuenta Individual</p>
+                <p class="tarjeta-beneficio">30% off en Canva Pro anual</p>
                 <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p><strong>Código:</strong> CANVATEAMS25</p>
-                <p>25% de descuento en Canva for Teams, válido hasta el 20/12/2026.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
+                    <p><strong>Código:</strong> CANVA30</p>
+                    <p>30% de descuento en Canva Pro anual, válido hasta el 30/11/2026.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Canva for Education — verificacion, estudiante, gratis -->
-        <article class="tarjeta-convenio" data-compania="canva" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-canva.png" alt="Canva">
-                <span class="badge-estado badge-gratis">100% gratis</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Canva</p>
-            <p class="tarjeta-cuenta">Cuenta Estudiante</p>
-            <p class="tarjeta-beneficio">Canva for Education gratis, solo por ser estudiante</p>
-                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver beneficio</button>
-                <div class="detalle-descuento" hidden>
-                <p>Canva te da acceso completo a <strong>Canva for Education sin costo</strong> al verificar tu condición de estudiante con tu correo institucional.</p>
-                <p class="nota-sin-codigo">No necesitas un código: el acceso se activa al verificarte.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+            <!-- Canva for Teams — cupon, familiar -->
+            <article class="tarjeta-convenio" data-compania="canva" data-cuenta="familiar" data-estado="activo" data-tipo-beneficio="cupon">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-canva.png" alt="Canva">
+                    <span class="badge-estado">Disponible</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
                 </div>
-        </article>
-
-        <!-- Adidas Creators Club — cupon, individual -->
-        <article class="tarjeta-convenio" data-compania="adidas" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-adidas.png" alt="Adidas">
-                <span class="badge-estado">Vence pronto</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Adidas</p>
-            <p class="tarjeta-cuenta">Cuenta Individual</p>
-            <p class="tarjeta-beneficio">15% off en tu primera compra online</p>
+                <p class="tarjeta-compania">Canva</p>
+                <p class="tarjeta-cuenta">Cuenta Familiar (hasta 5 integrantes)</p>
+                <p class="tarjeta-beneficio">25% off en Canva for Teams</p>
                 <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p><strong>Código:</strong> ADICLUB15</p>
-                <p>15% de descuento en tu primera compra, válido hasta el 10/12/2026.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
+                    <p><strong>Código:</strong> CANVATEAMS25</p>
+                    <p>25% de descuento en Canva for Teams, válido hasta el 20/12/2026.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Adidas Estudiantes — verificacion, no gratis (10% adicional) -->
-        <article class="tarjeta-convenio" data-compania="adidas" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-adidas.png" alt="Adidas">
-                <span class="badge-estado">-10% estudiantes</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Adidas</p>
-            <p class="tarjeta-cuenta">Cuenta Estudiante</p>
-            <p class="tarjeta-beneficio">10% de descuento adicional para estudiantes verificados</p>
-                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver beneficio</button>
+            <!-- Canva for Education — verificacion, estudiante, gratis -->
+            <article class="tarjeta-convenio" data-compania="canva" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-canva.png" alt="Canva">
+                    <span class="badge-estado badge-gratis">100% gratis</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Canva</p>
+                <p class="tarjeta-cuenta">Cuenta Estudiante</p>
+                <p class="tarjeta-beneficio">Canva for Education gratis, solo por ser estudiante</p>
+                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p>Adidas te da <strong>10% de descuento adicional</strong> (acumulable con otras promociones) al verificar tu condición de estudiante.</p>
-                <p class="nota-sin-codigo">No necesitas un código: el descuento se aplica después de verificarte.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+                    <p>Canva te da acceso completo a <strong>Canva for Education sin costo</strong> al verificar tu condición de estudiante con tu correo institucional.</p>
+                    <p class="nota-sin-codigo">No necesitas un código: el acceso se activa al verificarte.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
                 </div>
-        </article>
+            </article>
 
-        <!-- Notion Plus estudiante — verificacion, gratis -->
-        <article class="tarjeta-convenio" data-compania="notion" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
-            <div class="tarjeta-header">
-                <img src="../images/marcas/marca-notion.png" alt="Notion">
-                <span class="badge-estado badge-gratis">1 año gratis</span>
-                <button type="button" class="btn-favorito" aria-label="Agregar a favoritos">
-            <svg class="icono-corazon" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-        </button>
-            </div>
-            <p class="tarjeta-compania">Notion</p>
-            <p class="tarjeta-cuenta">Cuenta Estudiante</p>
-            <p class="tarjeta-beneficio">Plan Plus gratis por 1 año, solo por ser estudiante</p>
-                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver beneficio</button>
+            <!-- Adidas Creators Club — cupon, individual -->
+            <article class="tarjeta-convenio" data-compania="adidas" data-cuenta="individual" data-estado="vence" data-tipo-beneficio="cupon">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-adidas.png" alt="Adidas">
+                    <span class="badge-estado">Vence pronto</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Adidas</p>
+                <p class="tarjeta-cuenta">Cuenta Individual</p>
+                <p class="tarjeta-beneficio">15% off en tu primera compra online</p>
+                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
                 <div class="detalle-descuento" hidden>
-                <p>Notion te da <strong>1 año gratis</strong> del plan Plus al verificar tu condición de estudiante con tu correo institucional.</p>
-                <p class="nota-sin-codigo">No necesitas un código: el acceso se activa al verificarte.</p>
-                <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+                    <p><strong>Código:</strong> ADICLUB15</p>
+                    <p>15% de descuento en tu primera compra, válido hasta el 10/12/2026.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Ir a Pagos y Renovaciones</a>
                 </div>
-        </article>
+            </article>
 
-    </div>
-    <div class="estado-vacio-favoritos" id="estadoVacioFavoritos" hidden>
-  <p>Aún no tienes convenios en favoritos.</p>
-  <button type="button" id="btnVerListado" class="link-ver-listado">
-    Ver todos los convenios y agregar 
-  </button>
-</div>
-</section>
+            <!-- Adidas Estudiantes — verificacion -->
+            <article class="tarjeta-convenio" data-compania="adidas" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-adidas.png" alt="Adidas">
+                    <span class="badge-estado">-10% estudiantes</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Adidas</p>
+                <p class="tarjeta-cuenta">Cuenta Estudiante</p>
+                <p class="tarjeta-beneficio">10% de descuento adicional para estudiantes verificados</p>
+                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
+                <div class="detalle-descuento" hidden>
+                    <p>Adidas te da <strong>10% de descuento adicional</strong> (acumulable con otras promociones) al verificar tu condición de estudiante.</p>
+                    <p class="nota-sin-codigo">No necesitas un código: el descuento se aplica después de verificarte.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+                </div>
+            </article>
+
+            <!-- Notion Plus estudiante — verificacion, gratis -->
+            <article class="tarjeta-convenio" data-compania="notion" data-cuenta="estudiante" data-estado="activo" data-tipo-beneficio="verificacion">
+                <div class="tarjeta-header">
+                    <img src="../images/marcas/marca-notion.png" alt="Notion">
+                    <span class="badge-estado badge-gratis">1 año gratis</span>
+                    <button type="button" class="btn-favorito" aria-label="Agregar a favoritos" aria-pressed="false">
+                        <svg class="icono-corazon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="tarjeta-compania">Notion</p>
+                <p class="tarjeta-cuenta">Cuenta Estudiante</p>
+                <p class="tarjeta-beneficio">Plan Plus gratis por 1 año, solo por ser estudiante</p>
+                <button type="button" class="btn-ver-mas" aria-expanded="false">Ver descuento</button>
+                <div class="detalle-descuento" hidden>
+                    <p>Notion te da <strong>1 año gratis</strong> del plan Plus al verificar tu condición de estudiante con tu correo institucional.</p>
+                    <p class="nota-sin-codigo">No necesitas un código: el acceso se activa al verificarte.</p>
+                    <a href="pagos.html" class="btn-ir-pagos">Verificar y activar mi beneficio</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="estado-vacio-favoritos" id="estadoVacioFavoritos" hidden>
+            <p>Aún no tienes convenios en favoritos.</p>
+            <button type="button" id="btnVerListado" class="link-ver-listado">
+                Ver todos los convenios y agregar 
+            </button>
+        </div>
+    </section>
 </main>
-
 
     <footer class="site-footer">
       <div class="social-icons">
@@ -378,7 +365,6 @@
       </div>
       <p class="footer-text">Síguenos para nuevas promociones</p>
     </footer>    
- 
 
     <!-- Navegación Movil Inferior con Logo Integrado -->
     <nav class="nav-mobile-bottom" aria-label="Navegación móvil">

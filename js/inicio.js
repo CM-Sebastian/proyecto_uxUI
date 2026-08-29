@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const yaAbierta = tarjeta.classList.contains('expandida');
 
-      // (Opcional) Cierra las demás tarjetas si abres una nueva
+      // Cierra las demás tarjetas si abres una nueva
       tarjetas.forEach(otra => {
         if (otra !== tarjeta) cerrarDetalle(otra);
       });
@@ -43,11 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Funcionalidad del corazón de Favoritos
+  // Funcionalidad del corazón de Favoritos con accesibilidad actualizada
   document.querySelectorAll('.btn-favorito').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       btn.classList.toggle('activo');
+      
+      const estaActivo = btn.classList.contains('activo');
+      btn.setAttribute('aria-pressed', estaActivo);
     });
   });
 });
