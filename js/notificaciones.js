@@ -31,10 +31,10 @@ const notificacionesData = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  const btnNotificaciones = document.getElementById('menu-Notificaciones');
+  const btnNotificaciones = document.querySelectorAll('#menu-Notificaciones, .menu-notificaciones-mobile');
   const header = document.querySelector('header');
 
-  if (!btnNotificaciones || !header) return;
+  if (!btnNotificaciones.length || !header) return;
 
   // 1. Crear el HTML del panel flotante de forma dinámica
   const panel = document.createElement('div');
@@ -58,10 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
   header.appendChild(panel);
 
   // 2. Alternar visibilidad al hacer clic en el botón del nav
-  btnNotificaciones.addEventListener('click', (e) => {
-    e.stopPropagation();
-    panel.classList.toggle('show');
-    btnNotificaciones.classList.toggle('active');
+  btnNotificaciones.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      panel.classList.toggle('show');
+      btn.classList.toggle('active');
+
+      document.querySelectorAll('#menu-Notificaciones, .menu-notificaciones-mobile').forEach((otherBtn) => {
+        if (otherBtn !== btn) otherBtn.classList.remove('active');
+      });
+    });
   });
 
   // Evitar que al dar clic dentro del panel se cierre
@@ -72,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cerrar al dar clic fuera del menú/panel
   document.addEventListener('click', () => {
     panel.classList.remove('show');
-    btnNotificaciones.classList.remove('active');
+    document.querySelectorAll('#menu-Notificaciones, .menu-notificaciones-mobile').forEach((btn) => btn.classList.remove('active'));
   });
 
   // Evento para marcar todas como leídas
